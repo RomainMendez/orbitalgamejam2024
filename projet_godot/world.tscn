@@ -101,17 +101,4 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_n0l67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
-[node name="Enemy" parent="." instance=ExtResource("2_kofwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
-
-[node name="Enemy2" parent="." instance=ExtResource("2_kofwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14041, 0, -5.88845)
-
-[node name="Enemy3" parent="." instance=ExtResource("2_kofwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.600635, 0, -7.98447)
-
-[node name="Enemy4" parent="." instance=ExtResource("2_kofwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61182, 0, -10.2664)
-
-[node name="Enemy5" parent="." instance=ExtResource("2_kofwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0119171, 0, -11.4769)
+[node name="EnemyCharge" parent="." instance=ExtResource("2_1in3i")]
