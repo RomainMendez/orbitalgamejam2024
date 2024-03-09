@@ -6,7 +6,7 @@ extends CharacterBody3D
 @export var move_speed = 1.0
 @export var charge_speed = 15.0
 @export var attack_range = 2.0
-
+@export var charge_range = 20.0
 
 
 enum State {
@@ -21,13 +21,12 @@ enum State {
 @export var current_state : State = State.PATROLLING
 
 
-var charge_range = 10.0
 var my_timer = 0.0
 var dir = Vector3(0.0,0.0,0.0)
 
 
 # damage per hit
-const damage: int = 1
+const damage: int = 10
 
 func _physics_process(delta):
 	if player == null:
@@ -47,6 +46,7 @@ func _physics_process(delta):
 
 		State.CHARGE:
 			print("charging, dir: " + str(dir))
+			attempt_to_kill_player()
 			var collision = move_and_collide(dir * charge_speed * delta)
 			if (collision):
 				current_state=State.STUNNED;
