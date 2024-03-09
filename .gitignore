@@ -1,4 +1,4 @@
 # Godot 4+ specific ignores
 projet_godot/.godot/
-projet_godot/exports/Doom*
+projet_godot/export/Doom*
 .vscode/
