@@ -27,6 +27,8 @@ outer_radius = 21.0
 [sub_resource type="Environment" id="Environment_2bx7j"]
 background_mode = 1
 background_color = Color(0.643137, 0.643137, 0.643137, 1)
+fog_enabled = true
+fog_density = 0.15
 
 [node name="World" type="Node3D"]
 
