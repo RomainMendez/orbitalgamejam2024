@@ -11,6 +11,8 @@ const MOUSE_SENS = 0.5
 var can_shoot = true
 var dead = false
 
+var health_points: int = 100
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
@@ -66,6 +68,17 @@ func shoot_anim_done():
 
 func kill():
 	dead = true
+	print('player is dead')
+	$CanvasLayer/HealthBar.hide()
 	$CanvasLayer/DeathScreen.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
+func hurt(damage: int):
+	# no need to lower anymore
+	if health_points <= 0:
+		return
+	health_points -= damage
+	# print('player took damage! health points: ', health_points)
+	if health_points <= 0:
+		kill()
 	
