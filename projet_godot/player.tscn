@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://2go8h24o332j"]
+[gd_scene load_steps=12 format=3 uid="uid://2go8h24o332j"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ltc0k"]
 [ext_resource type="Texture2D" uid="uid://ducwu1mhnqckn" path="res://gun_sprites.png" id="1_wsjox"]
 [ext_resource type="AudioStream" uid="uid://cvrq385m34nc5" path="res://revolver_shot1.wav" id="2_j75ot"]
+[ext_resource type="Script" path="res://Label.gd" id="3_d72uy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7xmbu"]
 
@@ -196,6 +197,7 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Health: 100"
+script = ExtResource("3_d72uy")
 
 [node name="ShootSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_j75ot")
