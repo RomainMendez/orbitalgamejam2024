@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="3_1x8ah"]
-[ext_resource type="PackedScene" path="res://enemyCharge.tscn" id="4_qdjlk"]
-[ext_resource type="PackedScene" path="res://Tree.tscn" id="5_lgnta"]
+[ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
+[ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
 albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
