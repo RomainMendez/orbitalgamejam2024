@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2tpdeypqykmk"]
+
+[ext_resource type="Script" path="res://MobSpawner.gd" id="1_yjvvq"]
+
+[node name="MobSpawner" type="Node"]
+script = ExtResource("1_yjvvq")
+
+[node name="Spawner" type="MeshInstance3D" parent="."]

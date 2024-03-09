@@ -5,7 +5,7 @@ extends CharacterBody3D
 
 @export var move_speed = 1.0
 @export var charge_speed = 15.0
-@export var attack_range = 2.0
+@export var attack_range = 2.0	
 @export var charge_range = 15.0
 
 
@@ -37,7 +37,6 @@ func _physics_process(delta):
 		State.DEAD:
 			return
 		State.PREPARE_CHARGE:
-			print("Preparing charge: timer: " + str(my_timer))
 			target_player()
 			my_timer -=1 ;
 			if(my_timer == 0):
@@ -45,7 +44,6 @@ func _physics_process(delta):
 				animated_sprite_3d.play("dash");
 
 		State.CHARGE:
-			print("charging, dir: " + str(dir))
 			attempt_to_kill_player()
 			var collision = move_and_collide(dir * charge_speed * delta)
 			if (collision):
@@ -54,14 +52,12 @@ func _physics_process(delta):
 				my_timer = 1000.0;
 
 		State.STUNNED:
-			print("stunned, timer: " + str(my_timer));
 			my_timer -=1;
 			if(my_timer == 0):
 				current_state=State.PATROLLING;
 				animated_sprite_3d.play("idle")
 
 		State.PATROLLING:
-			print("patrolling");
 			target_player()
 			var dist_to_player = global_position.distance_to(player.global_position)
 

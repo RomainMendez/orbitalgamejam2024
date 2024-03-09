@@ -67,4 +67,4 @@ billboard = 2
 sprite_frames = SubResource("SpriteFrames_6nmiq")
 animation = &"death"
 autoplay = "default"
-frame_progress = 0.948068
+frame_progress = 0.0441334
