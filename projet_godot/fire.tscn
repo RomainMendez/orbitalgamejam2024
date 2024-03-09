@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2g3oikao4gwy"]
+[gd_scene load_steps=9 format=3 uid="uid://te3hqh05qh1t"]
 
-[ext_resource type="Gradient" uid="uid://d1kfchai2fkun" path="res://Fire2.tres" id="1_mb5o2"]
+[ext_resource type="Gradient" path="res://Fire2.tres" id="1_mb5o2"]
 [ext_resource type="Texture2D" uid="uid://cmk0djdmgg84c" path="res://Smoke30Frames_0.png" id="1_rl5qj"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_qwwna"]
@@ -51,6 +51,7 @@ material = SubResource("StandardMaterial3D_q1qbu")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00865555)
+emitting = false
 amount = 200
 lifetime = 0.5
 randomness = 1.0

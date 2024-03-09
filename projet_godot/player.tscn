@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://2go8h24o332j"]
+[gd_scene load_steps=13 format=3 uid="uid://2go8h24o332j"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ltc0k"]
 [ext_resource type="Texture2D" uid="uid://ducwu1mhnqckn" path="res://gun_sprites.png" id="1_wsjox"]
 [ext_resource type="AudioStream" uid="uid://cvrq385m34nc5" path="res://revolver_shot1.wav" id="2_j75ot"]
 [ext_resource type="Script" path="res://Label.gd" id="3_d72uy"]
+[ext_resource type="PackedScene" uid="uid://te3hqh05qh1t" path="res://fire.tscn" id="5_vktge"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7xmbu"]
 
@@ -65,25 +66,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_7xmbu")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 target_position = Vector3(0, 0, -2)
 collision_mask = 3
 hit_back_faces = false
 
 [node name="RayCast3DLeft" type="RayCast3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 1.5, 0)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 1, 0)
 target_position = Vector3(0, 0, -2)
 collision_mask = 3
 hit_back_faces = false
 
 [node name="RayCast3DRight" type="RayCast3D" parent="."]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 1.5, 0)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 1, 0)
 target_position = Vector3(0, 0, -2)
 collision_mask = 3
 hit_back_faces = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
 visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -214,3 +215,6 @@ script = ExtResource("3_d72uy")
 [node name="ShootSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_j75ot")
 bus = &"Sfx"
+
+[node name="fire" parent="." instance=ExtResource("5_vktge")]
+transform = Transform3D(0.6, 0, 0, 0, -2.62268e-08, 0.6, 0, -0.6, -2.62268e-08, 0, 0.5, -0.5)

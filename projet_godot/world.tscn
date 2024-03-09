@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=15 format=3 uid="uid://potr8w0bcnms"]
 
 [ext_resource type="PackedScene" uid="uid://b2tpdeypqykmk" path="res://MobSpawner.tscn" id="1_a28tn"]
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
 [ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
 [ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
-[ext_resource type="PackedScene" path="res://fire.tscn" id="8_3uxk4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
 albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
@@ -150,5 +149,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.4121)
 
 [node name="Tree" parent="." instance=ExtResource("5_lgnta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27614, 0, 10.6275)
-
-[node name="fire" parent="." instance=ExtResource("8_3uxk4")]
