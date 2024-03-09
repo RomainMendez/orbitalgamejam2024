@@ -1,13 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=13 format=3 uid="uid://potr8w0bcnms"]
 
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="3_1x8ah"]
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
-
-[ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="3_4bpq4"]
-
+[ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
 albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
@@ -33,8 +30,6 @@ background_mode = 1
 background_color = Color(0.643137, 0.643137, 0.643137, 1)
 fog_enabled = true
 fog_density = 0.15
-
-[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_bopsq"]
 
 [node name="World" type="Node3D"]
 
@@ -132,6 +127,5 @@ transform = Transform3D(0.508861, 0, -0.860849, 0, 1, 0, 0.860849, 0, 0.508861, 
 [node name="EnemyCharge" parent="." instance=ExtResource("4_qdjlk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.4121)
 
-[node name="Tree" parent="." instance=ExtResource("3_4bpq4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92938, 0, 9.61086)
-mesh = SubResource("PlaceholderMesh_bopsq")
+[node name="Tree" parent="." instance=ExtResource("5_lgnta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27614, 0, 10.6275)
