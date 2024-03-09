@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 @onready var animated_sprite_2d = $CanvasLayer/GunBase/AnimatedSprite2D
 @onready var ray_cast_3d = $RayCast3D
+@onready var ray_cast_3d_left = $RayCast3DLeft
+@onready var ray_cast_3d_right = $RayCast3DRight
 @onready var shoot_sound = $ShootSound
 
 
@@ -65,6 +67,14 @@ func shoot():
 		ray_cast_3d.get_collider().kill()
 	if ray_cast_3d.is_colliding() and ray_cast_3d.get_collider().has_method("burn"):
 		ray_cast_3d.get_collider().burn()
+	if ray_cast_3d_left.is_colliding() and ray_cast_3d_left.get_collider().has_method("kill"):
+		ray_cast_3d_left.get_collider().kill()
+	if ray_cast_3d_left.is_colliding() and ray_cast_3d_left.get_collider().has_method("burn"):
+		ray_cast_3d_left.get_collider().burn()
+	if ray_cast_3d_right.is_colliding() and ray_cast_3d_right.get_collider().has_method("kill"):
+		ray_cast_3d_right.get_collider().kill()
+	if ray_cast_3d_right.is_colliding() and ray_cast_3d_right.get_collider().has_method("burn"):
+		ray_cast_3d_right.get_collider().burn()
 
 func shoot_anim_done():
 	can_shoot = true
