@@ -14,7 +14,7 @@ albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_pw2v5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j3y5h"]
-size = Vector3(16, 14.3647, 15)
+size = Vector3(16, 14.3727, 15)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54xf7"]
 albedo_color = Color(0.109804, 1, 1, 1)
@@ -52,7 +52,7 @@ mesh = SubResource("PlaneMesh_pw2v5")
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ground"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ground/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -7.20044, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -7.19644, 0)
 shape = SubResource("BoxShape3D_j3y5h")
 
 [node name="Block" type="MeshInstance3D" parent="Environment"]

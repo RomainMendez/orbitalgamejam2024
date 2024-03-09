@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const GRAVITY = 200.0
+const GRAVITY = 20.0
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
