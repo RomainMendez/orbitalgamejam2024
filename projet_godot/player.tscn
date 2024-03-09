@@ -1,63 +1,67 @@
-[gd_scene load_steps=11 format=3 uid="uid://h8l0yohvjl3q"]
+[gd_scene load_steps=11 format=3 uid="uid://2go8h24o332j"]
 
-[ext_resource type="Texture2D" uid="uid://dt0qbq5cljwol" path="res://gun_sprites.png" id="1_2vg7d"]
-[ext_resource type="Script" path="res://player.gd" id="1_d80bg"]
-[ext_resource type="AudioStream" uid="uid://xt0ffoei17gw" path="res://revolver_shot1.wav" id="2_m4opr"]
+[ext_resource type="Script" path="res://player.gd" id="1_ltc0k"]
+[ext_resource type="Texture2D" uid="uid://ducwu1mhnqckn" path="res://gun_sprites.png" id="1_wsjox"]
+[ext_resource type="AudioStream" uid="uid://cvrq385m34nc5" path="res://revolver_shot1.wav" id="2_j75ot"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_03irh"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7xmbu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5to6s"]
-atlas = ExtResource("1_2vg7d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcqdb"]
+atlas = ExtResource("1_wsjox")
 region = Rect2(0, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_15b8e"]
-atlas = ExtResource("1_2vg7d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf8j7"]
+atlas = ExtResource("1_wsjox")
 region = Rect2(512, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ryvf"]
-atlas = ExtResource("1_2vg7d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lx7v"]
+atlas = ExtResource("1_wsjox")
 region = Rect2(1024, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_np753"]
-atlas = ExtResource("1_2vg7d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0btv"]
+atlas = ExtResource("1_wsjox")
 region = Rect2(1536, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7q36g"]
-atlas = ExtResource("1_2vg7d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_23jnc"]
+atlas = ExtResource("1_wsjox")
 region = Rect2(0, 0, 512, 512)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mbw6f"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ouaf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5to6s")
+"texture": SubResource("AtlasTexture_jcqdb")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_15b8e")
+"texture": SubResource("AtlasTexture_rf8j7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ryvf")
+"texture": SubResource("AtlasTexture_5lx7v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_np753")
+"texture": SubResource("AtlasTexture_f0btv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7q36g")
+"texture": SubResource("AtlasTexture_23jnc")
 }],
 "loop": false,
 "name": &"shoot",
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody3D" groups=["Player"]]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_d80bg")
+script = ExtResource("1_ltc0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_7xmbu")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -66,10 +70,6 @@ collision_mask = 3
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_03irh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -80,21 +80,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.5
-offset_top = -24.0
-offset_right = 20.5
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
-size_flags_horizontal = 8
-size_flags_vertical = 8
-metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/GunBase"]
-position = Vector2(297.5, -174)
-scale = Vector2(0.767578, 0.767578)
-sprite_frames = SubResource("SpriteFrames_mbw6f")
+position = Vector2(223, -86)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_2ouaf")
 animation = &"shoot"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="Crosshair" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 8
@@ -102,26 +101,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0.329412)
+color = Color(1, 1, 1, 0.262745)
 
 [node name="DeathScreen" type="Control" parent="CanvasLayer"]
 visible = false
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -132,10 +125,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -102.0
-offset_top = -93.0
-offset_right = 104.0
-offset_bottom = 93.0
+offset_left = -52.0
+offset_top = -35.0
+offset_right = 52.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -146,28 +139,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -54.5
-offset_top = -11.5
-offset_right = 54.5
-offset_bottom = 11.5
+offset_left = -37.0
+offset_top = -30.0
+offset_right = 37.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "You have died"
+text = "You Died!"
 
 [node name="Button" type="Button" parent="CanvasLayer/DeathScreen/Panel"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -32.5
-offset_top = -38.0
+offset_top = -2.0
 offset_right = 32.5
+offset_bottom = 29.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 text = "Restart"
 
 [node name="ShootSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_m4opr")
+stream = ExtResource("2_j75ot")
 bus = &"Sfx"
