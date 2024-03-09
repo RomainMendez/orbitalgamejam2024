@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" path="res://enemyCharge.tscn" id="4_qdjlk"]
 [ext_resource type="PackedScene" path="res://Tree.tscn" id="5_lgnta"]
 [ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
+[ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
+[ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
 albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)

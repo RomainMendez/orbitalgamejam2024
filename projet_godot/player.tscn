@@ -50,7 +50,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_23jnc")
 }],
-"loop": false,
+"loop": true,
 "name": &"shoot",
 "speed": 10.0
 }]
@@ -61,15 +61,30 @@ collision_mask = 3
 script = ExtResource("1_ltc0k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_7xmbu")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-target_position = Vector3(0, 0, -1000)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+target_position = Vector3(0, 0, -2)
 collision_mask = 3
+hit_back_faces = false
+
+[node name="RayCast3DLeft" type="RayCast3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 1.5, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 3
+hit_back_faces = false
+
+[node name="RayCast3DRight" type="RayCast3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 1.5, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 3
+hit_back_faces = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -92,8 +107,6 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_2ouaf")
 animation = &"shoot"
 autoplay = "idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="Crosshair" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 8
