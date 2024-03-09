@@ -61,6 +61,7 @@ collision_mask = 3
 script = ExtResource("1_ltc0k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_7xmbu")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
@@ -82,7 +83,8 @@ collision_mask = 3
 hit_back_faces = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
