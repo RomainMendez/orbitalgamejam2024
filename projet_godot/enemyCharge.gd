@@ -6,7 +6,7 @@ extends CharacterBody3D
 @export var move_speed = 1.0
 @export var charge_speed = 15.0
 @export var attack_range = 2.0
-@export var charge_range = 20.0
+@export var charge_range = 15.0
 
 
 enum State {
@@ -26,7 +26,7 @@ var dir = Vector3(0.0,0.0,0.0)
 
 
 # damage per hit
-const damage: int = 10
+const damage: int = 5
 
 func _physics_process(delta):
 	if player == null:
