@@ -37,6 +37,7 @@ mesh = SubResource("PlaneMesh_pw2v5")
 
 [node name="Block" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.44593, 0, 0, 0, 4.70178, 0, 0, 0, 1.32646, -5.02943, 0.429212, 4.0552)
+visible = false
 material_override = SubResource("StandardMaterial3D_54xf7")
 mesh = SubResource("BoxMesh_y2ikd")
 
@@ -57,6 +58,7 @@ shape = SubResource("ConcavePolygonShape3D_5lueg")
 
 [node name="Block3" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.44593, 0, 0, 0, 4.70178, 0, 0, 0, 1.32646, 4.09057, 0.42921, -4.14337)
+visible = false
 material_override = SubResource("StandardMaterial3D_54xf7")
 mesh = SubResource("BoxMesh_y2ikd")
 
@@ -67,6 +69,7 @@ shape = SubResource("ConcavePolygonShape3D_5lueg")
 
 [node name="Block4" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.44593, 0, 0, 0, 4.70178, 0, 0, 0, 1.32646, -12.6588, 0.42921, -4.92068)
+visible = false
 material_override = SubResource("StandardMaterial3D_54xf7")
 mesh = SubResource("BoxMesh_y2ikd")
 
@@ -77,6 +80,7 @@ shape = SubResource("ConcavePolygonShape3D_5lueg")
 
 [node name="Block5" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.44593, 0, 0, 0, 4.70178, 0, 0, 0, 1.32646, -1.81955, 0.42921, -2.22079)
+visible = false
 material_override = SubResource("StandardMaterial3D_54xf7")
 mesh = SubResource("BoxMesh_y2ikd")
 
@@ -86,6 +90,7 @@ mesh = SubResource("BoxMesh_y2ikd")
 shape = SubResource("ConcavePolygonShape3D_5lueg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+visible = false
 
 [node name="ArenaLimits" type="CSGMesh3D" parent="Environment"]
 use_collision = true
@@ -101,4 +106,22 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_n0l67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
-[node name="EnemyCharge" parent="." instance=ExtResource("2_1in3i")]
+[node name="Enemy" parent="." instance=ExtResource("2_kofwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
+visible = false
+
+[node name="Enemy2" parent="." instance=ExtResource("2_kofwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14041, 0, -5.88845)
+visible = false
+
+[node name="Enemy3" parent="." instance=ExtResource("2_kofwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.600635, 0, -7.98447)
+visible = false
+
+[node name="Enemy4" parent="." instance=ExtResource("2_kofwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61182, 0, -10.2664)
+visible = false
+
+[node name="Enemy5" parent="." instance=ExtResource("2_kofwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0119171, 0, -11.4769)
+visible = false
