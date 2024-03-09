@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+const GRAVITY = 200.0
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
@@ -13,16 +14,20 @@ var dead = false
 const damage: int = 1
 
 func _physics_process(delta):
+
 	if dead:
 		return
 	if player == null:
 		return
+		
 	
 	var dir = player.global_position - global_position
 	dir.y = 0.0
 	dir = dir.normalized()
 	
 	velocity = dir * move_speed
+	# Shitty Gravity
+	velocity.y -= GRAVITY * delta
 	move_and_slide()
 	attempt_to_kill_player()
 

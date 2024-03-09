@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 @export var SPEED = 2.0;
 
+const GRAVITY = 20.0
+
 # The enemy isn't a gatling gun
 @export var DELAY_BETWEEN_SHOOT = 3.0;
 var until_next_shoot = DELAY_BETWEEN_SHOOT
@@ -49,6 +51,11 @@ func attempt_fire(delta: float):
 			until_next_shoot = DELAY_BETWEEN_SHOOT
 
 func _physics_process(delta):
+	
+	
+	# Shitty Gravity
+	velocity.y += GRAVITY * delta
+	
 	if dead:
 		return
 	attempt_fire(delta)

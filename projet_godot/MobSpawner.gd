@@ -56,7 +56,6 @@ func select_enemy_type():
 func spawn():
 	# spawn a new enemy
 	var chosen_spawner : int = randi_range(1, number_of_spawners-1)
-	chosen_spawner = 0;
 	print("INDEX SELECTED : " + str(chosen_spawner))
 	var spawner = all_spawners[chosen_spawner]
 	var type_of_monster : String = select_enemy_type()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=16 format=3 uid="uid://potr8w0bcnms"]
 
 [ext_resource type="PackedScene" uid="uid://b2tpdeypqykmk" path="res://MobSpawner.tscn" id="1_a28tn"]
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
@@ -12,6 +12,9 @@
 albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pw2v5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j3y5h"]
+size = Vector3(16, 14.3647, 15)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54xf7"]
 albedo_color = Color(0.109804, 1, 1, 1)
@@ -45,6 +48,12 @@ volumetric_fog_density = 0.15
 transform = Transform3D(27.5909, 0, 0, 0, 1, 0, 0, 0, 21.6831, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_qxgmw")
 mesh = SubResource("PlaneMesh_pw2v5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ground/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -7.20044, 0)
+shape = SubResource("BoxShape3D_j3y5h")
 
 [node name="Block" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.44593, 0, 0, 0, 4.70178, 0, 0, 0, 1.32646, -5.02943, 0.429212, 4.0552)
@@ -129,7 +138,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1946, 0, -3.36662)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
 [node name="Enemy" parent="." instance=ExtResource("2_kofwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.74894, -4)
 
 [node name="Enemy2" parent="." instance=ExtResource("2_kofwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14041, 0, -5.88845)

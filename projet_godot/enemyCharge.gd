@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+const GRAVITY = 200.0
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
@@ -31,6 +32,8 @@ const damage: int = 5
 func _physics_process(delta):
 	if player == null:
 		return
+		
+	
 
 
 	match current_state:
@@ -45,6 +48,7 @@ func _physics_process(delta):
 
 		State.CHARGE:
 			attempt_to_kill_player()
+			velocity.y -= GRAVITY * delta
 			var collision = move_and_collide(dir * charge_speed * delta)
 			if (collision):
 				current_state=State.STUNNED;
@@ -67,6 +71,9 @@ func _physics_process(delta):
 				animated_sprite_3d.play("charge")
 				return
 			velocity = dir * move_speed
+
+			# Shitty Gravity
+			velocity.y -= GRAVITY * delta
 			move_and_slide()
 
 func target_player():
