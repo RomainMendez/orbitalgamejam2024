@@ -6,6 +6,9 @@ extends CharacterBody3D
 @onready var ray_cast_3d_right = $RayCast3DRight
 @onready var flame_from_flamethrower = $fire
 @onready var shoot_sound = $ShootSound
+@onready var flame_start_sound = $flameStartSound
+@onready var flame_loop_sound = $flameLoopSound
+@onready var flame_end_sound = $flameEndSound
 
 
 const SPEED = 5.0
@@ -38,13 +41,16 @@ func _process(delta):
 	if dead:
 		return
 	if Input.is_action_just_pressed("shoot"):
+		flame_start_sound.play()
 		animated_sprite_2d.play("shoot")
 		shoot()
 		flame_from_flamethrower.get_child(0).emitting = true
 	if Input.is_action_pressed("shoot"):
+		flame_loop_sound.play()
 		shoot()
 		flame_from_flamethrower.get_child(0).emitting = true
 	if Input.is_action_just_released("shoot"):
+		flame_end_sound.play()
 		animated_sprite_2d.play("idle")
 		flame_from_flamethrower.get_child(0).emitting = false
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://te3hqh05qh1t"]
 
-[ext_resource type="Gradient" path="res://Fire2.tres" id="1_mb5o2"]
+[ext_resource type="Gradient" uid="uid://42igo4utan83" path="res://Fire2.tres" id="1_mb5o2"]
 [ext_resource type="Texture2D" uid="uid://cmk0djdmgg84c" path="res://Smoke30Frames_0.png" id="1_rl5qj"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_qwwna"]
