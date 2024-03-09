@@ -10,8 +10,6 @@ func _ready():
 
 func _physics_process(delta):
 	velocity = initial_direction * SPEED
-	print(velocity);
-	print(remaining_distance)
 	if remaining_distance > 0:
 		remaining_distance -= SPEED * delta
 	else:

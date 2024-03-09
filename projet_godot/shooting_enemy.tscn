@@ -1,9 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhal4jv2o5482"]
+[gd_scene load_steps=10 format=3 uid="uid://dhal4jv2o5482"]
 
 [ext_resource type="Texture2D" uid="uid://dowtob4knto17" path="res://enemy_lol.png" id="1_1eigr"]
 [ext_resource type="Script" path="res://shooting_enemy.gd" id="1_tn8ip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_keq07"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bgti"]
+atlas = ExtResource("1_1eigr")
+region = Rect2(266, 271, 266, 271)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43m08"]
+atlas = ExtResource("1_1eigr")
+region = Rect2(0, 271, 266, 271)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxxi1"]
 atlas = ExtResource("1_1eigr")
@@ -19,6 +27,17 @@ region = Rect2(532, 0, 266, 271)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6nmiq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bgti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43m08")
+}],
+"loop": true,
+"name": &"death",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kxxi1")
@@ -46,6 +65,6 @@ shape = SubResource("CapsuleShape3D_keq07")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_6nmiq")
+animation = &"death"
 autoplay = "default"
-frame = 2
-frame_progress = 1.0
+frame_progress = 0.948068

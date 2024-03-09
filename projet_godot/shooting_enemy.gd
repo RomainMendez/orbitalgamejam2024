@@ -33,11 +33,13 @@ func shoot():
 	scene_instance.set_name("pewpew")
 	scene_instance.initial_direction = (player.global_position + Vector3(0, 1.5, 0)  - global_position).normalized()
 	scene_instance.velocity = (player.global_position + Vector3(0, 1.5, 0) - global_position).normalized()
-	print(scene_instance.velocity)
+	
 	scene_instance.remaining_distance = WEAPON_RANGE
 	add_child(scene_instance)
 	
 func attempt_fire(delta: float):
+	if dead:
+		return
 	var dist_to_player = global_position.distance_to(player.global_position)
 	if until_next_shoot > 0:
 		until_next_shoot -= delta
@@ -53,3 +55,4 @@ func _physics_process(delta):
 
 func kill():
 	dead = true
+	$AnimatedSprite3D.play("death")

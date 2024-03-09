@@ -24,6 +24,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * MOUSE_SENS
 		rotation_degrees.x -= event.relative.y * MOUSE_SENS
+		rotation_degrees.x = clamp(rotation_degrees.x, -80, 80)	
 
 func _process(delta):
 	if Input.is_action_just_pressed("exit"):
@@ -40,7 +41,7 @@ func _physics_process(delta):
 	if dead:
 		return
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction = ((transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * Vector3(1,0,1)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
