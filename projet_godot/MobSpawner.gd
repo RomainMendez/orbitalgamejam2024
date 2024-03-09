@@ -17,7 +17,7 @@ var shooting_enemy_count = 0
 var charging_enemy_count = 0
 
 @onready var all_spawners : Array[Node] = self.get_children()
-var number_of_spawners = all_spawners.size()
+@onready var number_of_spawners = all_spawners.size()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -55,12 +55,31 @@ func select_enemy_type():
 
 func spawn():
 	# spawn a new enemy
-	var spawner = all_spawners[randi_range(0, number_of_spawners-1)]
-	print(spawner)
+	var chosen_spawner : int = randi_range(1, number_of_spawners-1)
+	print("INDEX SELECTED : " + str(chosen_spawner))
+	var spawner = all_spawners[chosen_spawner]
 	var type_of_monster : String = select_enemy_type()
 	if type_of_monster == "":
 		print("Can't spawn new entities !")
 		return
+	var counter = 0;
+	for s in all_spawners:
+		if counter == chosen_spawner:
+			print("Wrong index !")
+		else:
+			continue
+		
+		if s.has_method("spawn_zombie"):
+			print("tg mdr")
+			#spawner = s;
+		else:
+			print(s)
+			print("It didn't have the method :(")
+		counter += 1
+
+	for entry in spawner.get_method_list():
+		if "spawn" in str(entry):
+			print(entry)
 
 	if type_of_monster == 'base':
 		base_enemy_count += 1

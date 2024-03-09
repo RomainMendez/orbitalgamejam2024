@@ -112,17 +112,19 @@ shadow_enabled = true
 
 [node name="MobSpawner" parent="WorldEnvironment" instance=ExtResource("1_a28tn")]
 
-[node name="spawner3" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0973, 0, -1.68331)
-
 [node name="spawner" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.8361)
 
+[node name="spawner3" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0973, 0, -1.68331)
+
 [node name="spawner2" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4069, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.6722)
+
+[node name="spawner5" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
 
 [node name="spawner4" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.3071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1946, 0, -3.36662)
 
 [node name="Player" parent="." instance=ExtResource("1_n0l67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
