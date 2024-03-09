@@ -112,7 +112,7 @@ shadow_enabled = true
 
 [node name="MobSpawner" parent="WorldEnvironment" instance=ExtResource("1_a28tn")]
 
-[node name="spawner" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
+[node name="DO_NOT_USE" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.8361)
 
 [node name="spawner3" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]

@@ -56,26 +56,13 @@ func select_enemy_type():
 func spawn():
 	# spawn a new enemy
 	var chosen_spawner : int = randi_range(1, number_of_spawners-1)
+	chosen_spawner = 0;
 	print("INDEX SELECTED : " + str(chosen_spawner))
 	var spawner = all_spawners[chosen_spawner]
 	var type_of_monster : String = select_enemy_type()
 	if type_of_monster == "":
 		print("Can't spawn new entities !")
 		return
-	var counter = 0;
-	for s in all_spawners:
-		if counter == chosen_spawner:
-			print("Wrong index !")
-		else:
-			continue
-		
-		if s.has_method("spawn_zombie"):
-			print("tg mdr")
-			#spawner = s;
-		else:
-			print(s)
-			print("It didn't have the method :(")
-		counter += 1
 
 	for entry in spawner.get_method_list():
 		if "spawn" in str(entry):
