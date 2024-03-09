@@ -41,11 +41,10 @@ func get_timer() -> Timer:
 func select_enemy_type():
 	var all_valid_types = []
 	if base_enemy_count < MAX_BASE_ENEMY:
-		print("ijozejgoz")
-		#all_valid_types.append('base')
-	elif shooting_enemy_count < MAX_SHOOTING_ENEMY:
+		all_valid_types.append('base')
+	if shooting_enemy_count < MAX_SHOOTING_ENEMY:
 		all_valid_types.append('shooting')
-	elif charging_enemy_count < MAX_CHARGING_ENEMY:
+	if charging_enemy_count < MAX_CHARGING_ENEMY:
 		all_valid_types.append('charging')
 		
 	if all_valid_types.size() == 0:
@@ -60,6 +59,7 @@ func spawn():
 	print(spawner)
 	var type_of_monster : String = select_enemy_type()
 	if type_of_monster == "":
+		print("Can't spawn new entities !")
 		return
 
 	if type_of_monster == 'base':

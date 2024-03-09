@@ -4,11 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="3_1x8ah"]
-[ext_resource type="PackedScene" path="res://enemyCharge.tscn" id="4_qdjlk"]
-[ext_resource type="PackedScene" path="res://Tree.tscn" id="5_lgnta"]
-[ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
 [ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
+[ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
 albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
@@ -109,17 +107,20 @@ shadow_enabled = true
 
 [node name="MobSpawner" parent="WorldEnvironment" instance=ExtResource("1_a28tn")]
 
-[node name="spawner" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.2421)
-
-[node name="spawner2" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7227, 0, 9.15276)
-
 [node name="spawner3" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0973, 0, -1.68331)
 
+[node name="spawner" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.8361)
+
+[node name="spawner2" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4069, 0, 0)
+
+[node name="spawner4" parent="WorldEnvironment/MobSpawner" instance=ExtResource("7_2xo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.3071)
+
 [node name="Player" parent="." instance=ExtResource("1_n0l67")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
 [node name="Enemy" parent="." instance=ExtResource("2_kofwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
