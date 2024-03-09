@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://c5aga45gxki8a"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_j6g86"]
+[ext_resource type="Script" path="res://enemyCharge.gd" id="1_g8wmc"]
 [ext_resource type="Texture2D" uid="uid://deqvxpakhsfit" path="res://monster_sprites.png" id="2_p0i4v"]
 [ext_resource type="AudioStream" uid="uid://qxfjnbqrobwf" path="res://monster_die.wav" id="3_15syr"]
 
@@ -116,7 +116,7 @@ animations = [{
 [node name="EnemyCharge" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_j6g86")
+script = ExtResource("1_g8wmc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -127,7 +127,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15512, 0)
 pixel_size = 0.009
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_u8br5")
-animation = &"dash"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="DeathSound" type="AudioStreamPlayer3D" parent="."]
