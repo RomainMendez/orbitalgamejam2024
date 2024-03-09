@@ -39,6 +39,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("shoot"):
 		animated_sprite_2d.play("shoot")
 		shoot()
+	if Input.is_action_pressed("shoot"):
+		shoot()
 	if Input.is_action_just_released("shoot"):
 		animated_sprite_2d.play("idle")
 
