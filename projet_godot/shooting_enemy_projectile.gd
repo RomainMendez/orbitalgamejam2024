@@ -13,7 +13,6 @@ func _physics_process(delta):
 	print(velocity);
 	print(remaining_distance)
 	if remaining_distance > 0:
-		move_and_slide()
 		remaining_distance -= SPEED * delta
 	else:
 		queue_free()
@@ -25,9 +24,9 @@ func _physics_process(delta):
 		remaining_distance = 0;
 		
 		var hit = collision.get_collider()
-		if hit.has_method("take_damage"):
+		if hit.has_method("hurt"):
 			print("Damaged player !")
-			hit.take_damage(10)
+			hit.hurt(10)
 		else:
 			print("Hit something else !")
 		

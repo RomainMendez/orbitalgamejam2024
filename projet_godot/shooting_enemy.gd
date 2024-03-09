@@ -10,7 +10,7 @@ var until_next_shoot = DELAY_BETWEEN_SHOOT
 @export var WEAPON_RANGE = 50.0;
 
 # At which range does the enemy fire
-@export var RANGE_TO_FIRE_FROM = 5.0;
+@export var RANGE_TO_FIRE_FROM = 25.0;
 
 var dead = false;
 

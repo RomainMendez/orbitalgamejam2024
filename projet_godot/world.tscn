@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=11 format=3 uid="uid://potr8w0bcnms"]
 
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
+[ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="3_1x8ah"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
-albedo_color = Color(0.423529, 0, 0.00392157, 1)
+albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pw2v5"]
 
@@ -115,3 +116,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61182, 0, -10.2664)
 
 [node name="Enemy5" parent="." instance=ExtResource("2_kofwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0119171, 0, -11.4769)
+
+[node name="ShootingEnemy" parent="." instance=ExtResource("3_1x8ah")]
+transform = Transform3D(0.508861, 0, -0.860849, 0, 1, 0, 0.860849, 0, 0.508861, 9.89448, 1.33915, 0)
