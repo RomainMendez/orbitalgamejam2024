@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhal4jv2o5482"]
+
+[ext_resource type="Texture2D" uid="uid://dowtob4knto17" path="res://enemy_lol.png" id="1_1eigr"]
+[ext_resource type="Script" path="res://shooting_enemy.gd" id="1_tn8ip"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_keq07"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxxi1"]
+atlas = ExtResource("1_1eigr")
+region = Rect2(0, 0, 266, 271)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4it4"]
+atlas = ExtResource("1_1eigr")
+region = Rect2(266, 0, 266, 271)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5jl6"]
+atlas = ExtResource("1_1eigr")
+region = Rect2(532, 0, 266, 271)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nmiq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxxi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4it4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5jl6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ShootingEnemy" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_tn8ip")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_keq07")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6nmiq")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
