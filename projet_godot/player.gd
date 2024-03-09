@@ -68,6 +68,8 @@ func shoot_anim_done():
 
 func kill():
 	dead = true
+	print('player is dead')
+	$CanvasLayer/HealthBar.hide()
 	$CanvasLayer/DeathScreen.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
