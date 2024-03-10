@@ -59,7 +59,7 @@ collision_layer = 3
 script = ExtResource("1_8d0oq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 10.53, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_2te00")
 
 [node name="Sprite" type="AnimatedSprite3D" parent="StaticBody3D"]
@@ -69,4 +69,4 @@ billboard = 2
 sprite_frames = SubResource("SpriteFrames_j6nvw")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.912246
+frame_progress = 0.441595
