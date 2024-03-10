@@ -12,7 +12,7 @@ void vertex() {
 
 void fragment() {
   //NORMAL_MAP = texture(normalmap, tex_position).xyz;
-  METALLIC = 0.0;
-  ROUGHNESS = 0.01;
+  //METALLIC = 0.0;
+  //ROUGHNESS = 0.01;
   ALBEDO = vec3(0.0, 0.25, 0.08);
 }
