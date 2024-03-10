@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c5aga45gxki8a"]
+[gd_scene load_steps=17 format=3 uid="uid://c5aga45gxki8a"]
 
 [ext_resource type="Script" path="res://enemyCharge.gd" id="1_g8wmc"]
 [ext_resource type="Texture2D" uid="uid://dpj7fans8ssa0" path="res://deer.png" id="2_3wmb6"]
 [ext_resource type="AudioStream" uid="uid://qxfjnbqrobwf" path="res://monster_die.wav" id="3_15syr"]
+[ext_resource type="Texture2D" uid="uid://bpcu8h2gn14t8" path="res://deer_png.png" id="3_ijjiq"]
 [ext_resource type="AudioStream" uid="uid://dxsnxllo65ycf" path="res://swing_floraphonic_from_pixabay_.mp3" id="4_r5sqq"]
 [ext_resource type="AudioStream" uid="uid://crs1lqxpf53eo" path="res://metal-pipe-162670_Kaleb_Rubio_from_Pixabay.mp3" id="5_0bh06"]
 
@@ -28,9 +29,9 @@ region = Rect2(0, 0, 719, 1251)
 atlas = ExtResource("2_3wmb6")
 region = Rect2(719, 0, 719, 1251)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_npeox"]
-atlas = ExtResource("2_3wmb6")
-region = Rect2(1438, 0, 719, 1251)
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1dx4"]
+atlas = ExtResource("3_ijjiq")
+region = Rect2(0, 0, 713, 1251)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fyggo"]
 atlas = ExtResource("2_3wmb6")
@@ -69,7 +70,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ji0to")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_npeox")
+"texture": SubResource("AtlasTexture_y1dx4")
 }],
 "loop": false,
 "name": &"death",
@@ -106,8 +107,10 @@ transform = Transform3D(0.327755, 0, 0, 0, 0.327755, 0, 0, 0, 0.327755, 0, 1.474
 pixel_size = 0.009
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_u8br5")
-animation = &"dash"
+animation = &"death"
 autoplay = "idle"
+frame = 2
+frame_progress = 1.0
 
 [node name="DeathSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_15syr")
