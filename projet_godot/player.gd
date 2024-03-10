@@ -18,6 +18,7 @@ var can_shoot = true
 var dead = false
 
 var health_points: int = 100
+var score: int = 0
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -95,6 +96,7 @@ func kill():
 	dead = true
 	print('player is dead')
 	$CanvasLayer/HealthBar.hide()
+	$CanvasLayer/Score.hide()
 	$CanvasLayer/DeathScreen.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
