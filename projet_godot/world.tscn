@@ -51,6 +51,7 @@ glow_enabled = true
 glow_intensity = 0.5
 glow_blend_mode = 0
 fog_density = 0.15
+volumetric_fog_enabled = true
 volumetric_fog_density = 0.15
 
 [node name="World" type="Node3D"]
