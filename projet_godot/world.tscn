@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="3_1x8ah"]
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
-[ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
+[ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree0.tscn" id="5_lgnta"]
 [ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
