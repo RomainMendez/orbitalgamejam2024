@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="9_dw4o3"]
 [ext_resource type="PackedScene" uid="uid://2eovmr5wpy0g" path="res://Tree2.tscn" id="9_gqshd"]
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="9_ixcdh"]
+[ext_resource type="PackedScene" uid="uid://cd07mfejded45" path="res://bush.tscn" id="6_p2gus"]
 [ext_resource type="PackedScene" uid="uid://bn4astopqaqly" path="res://Tree3.tscn" id="10_fthd7"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_3bqst"]
@@ -76,310 +77,310 @@ material = SubResource("ShaderMaterial_og4f1")
 [node name="Forest2" type="Node" parent="Environment"]
 
 [node name="Tree13" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 3.6835, 6.40256, -35.0691)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 3.6835, -4.81273, -35.0691)
 visible = false
 skeleton = NodePath("../Tree9")
 
 [node name="Tree14" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 9.31857, 7.20659, -36.0638)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 9.31857, -4.0087, -36.0638)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree15" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 6.13434, 6.82244, -38.7052)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 6.13434, -4.39285, -38.7052)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree16" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 15.0765, 7.21037, -39.0692)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 15.0765, -4.00492, -39.0692)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree6" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -14.1088, 7.26281, -21.8139)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -14.1088, -3.95248, -21.8139)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -7.31975, 7.51643, -23.9008)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -7.31975, -3.69886, -23.9008)
 skeleton = NodePath("../..")
 
 [node name="Tree4" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -4.48391, 7.47531, -15.055)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -4.48391, -3.73998, -15.055)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree5" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -18.3212, 7.99568, 10.6057)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -18.3212, -3.21961, 10.6057)
 
 [node name="Tree8" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 24.2656, 6.86166, -9.04741)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 24.2656, -4.35363, -9.04741)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree7" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 19.3627, 7.40329, -11.9441)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 19.3627, -3.812, -11.9441)
 
 [node name="Tree3" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 19.9428, 7.01915, -7.84783)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 19.9428, -4.19614, -7.84783)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree2" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 13.0803, 7.40707, -13.5924)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 13.0803, -3.80822, -13.5924)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree9" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 25.553, 5.60067, -30.5318)
+transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 25.553, -5.61462, -30.5318)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree10" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 20.5021, 6.4047, -27.8426)
+transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 20.5021, -4.81059, -27.8426)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree11" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 24.3473, 6.02056, -26.3159)
+transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 24.3473, -5.19473, -26.3159)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree12" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 15.9564, 6.40848, -23.2034)
+transform = Transform3D(0.963989, 0, -0.265943, 0, 1, 0, 0.265943, 0, 0.963989, 15.9564, -4.80681, -23.2034)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree17" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -24.1444, 7.23968, -13.7578)
+transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -24.1444, -3.97561, -13.7578)
 skeleton = NodePath("../Tree13")
 
 [node name="Tree18" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -29.7646, 7.61125, -12.6822)
+transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -29.7646, -3.60404, -12.6822)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree19" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -26.5427, 7.65957, -10.0869)
+transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -26.5427, -3.55572, -10.0869)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree20" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -35.4787, 7.69694, -9.59435)
+transform = Transform3D(0.842264, 0, -0.539065, 0, 1, 0, 0.539065, 0, 0.842264, -35.4787, -3.51835, -9.59435)
 skeleton = NodePath("../Tree13")
 
 [node name="Tree21" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -25.1029, 6.59646, -46.6015)
+transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -25.1029, -4.61883, -46.6015)
 skeleton = NodePath("../Tree17")
 
 [node name="Tree22" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -19.4988, 7.66015, -47.7579)
+transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -19.4988, -3.55514, -47.7579)
 skeleton = NodePath("../Tree13")
 
 [node name="Tree23" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -22.7577, 7.73127, -50.3065)
+transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -22.7577, -3.48402, -50.3065)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree24" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -13.8297, 7.62994, -50.9275)
+transform = Transform3D(-0.849929, 0, 0.526896, 0, 1, 0, -0.526896, 0, -0.849929, -13.8297, -3.58535, -50.9275)
 skeleton = NodePath("../Tree17")
 
 [node name="Tree25" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -34.588, 3.90539, -25.6258)
+transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -34.588, -7.3099, -25.6258)
 skeleton = NodePath("../Tree21")
 
 [node name="Tree26" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -40.1749, 4.70942, -24.389)
+transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -40.1749, -6.50587, -24.389)
 skeleton = NodePath("../Tree17")
 
 [node name="Tree27" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -36.8797, 4.32528, -21.8875)
+transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -36.8797, -6.89001, -21.8875)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree28" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -45.7978, 4.7132, -21.1381)
+transform = Transform3D(0.857418, 0, -0.514619, 0, 1, 0, 0.514619, 0, 0.857418, -45.7978, -6.50209, -21.1381)
 skeleton = NodePath("../Tree21")
 
 [node name="Tree29" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 22.6911, 5.90809, 19.4129)
+transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 22.6911, -5.3072, 19.4129)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree30" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 22.2384, 6.71212, 13.7086)
+transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 22.2384, -4.50317, 13.7086)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree31" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 19.3054, 6.32798, 16.6264)
+transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 19.3054, -4.88731, 16.6264)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree32" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 19.7961, 6.7159, 7.6903)
+transform = Transform3D(-0.628207, 0, -0.778047, 0, 1, 0, 0.778047, 0, -0.628207, 19.7961, -4.49939, 7.6903)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree33" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 35.9893, 5.35891, -4.05161)
+transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 35.9893, -5.85638, -4.05161)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree34" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 32.7394, 6.84874, 0.328882)
+transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 32.7394, -4.36655, 0.328882)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree35" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 36.8723, 6.4646, 0.142129)
+transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 36.8723, -4.75069, 0.142129)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree36" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 30.4994, 6.85252, 6.42541)
+transform = Transform3D(0.988178, 0, 0.153314, 0, 1, 0, -0.153314, 0, 0.988178, 30.4994, -4.36277, 6.42541)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree37" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, -4.71542, 7.79574, 18.5623)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, -4.71542, -3.41955, 18.5623)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree38" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 0.963887, 7.99102, 17.5327)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 0.963887, -3.22427, 17.5327)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree39" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, -2.22035, 8.1396, 14.8914)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, -2.22035, -3.07569, 14.8914)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree40" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 6.7218, 7.5884, 14.5274)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 6.7218, -3.62689, 14.5274)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree41" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -14.6164, 8.57996, 29.7835)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -14.6164, -2.63533, 29.7835)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree42" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -7.82729, 8.83358, 27.6966)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -7.82729, -2.38171, 27.6966)
 
 [node name="Tree43" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -4.99145, 7.10816, 36.5424)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -4.99145, -4.10713, 36.5424)
 skeleton = NodePath("../Tree5")
 
 [node name="Tree44" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -16.1149, 7.09553, 15.2788)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, -16.1149, -4.11976, 15.2788)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree45" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -41.9058, 7.13021, 5.63748)
+transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -41.9058, -4.08508, 5.63748)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree46" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -41.0177, 7.51141, -0.0153855)
+transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -41.0177, -3.70388, -0.0153855)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree47" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -44.5495, 6.90395, 2.1392)
+transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -44.5495, -4.31134, 2.1392)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree48" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -41.9915, 6.75787, -6.437)
+transform = Transform3D(-0.792108, 0, -0.61038, 0, 1, 0, 0.61038, 0, -0.792108, -41.9915, -4.45742, -6.437)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree49" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -32.4263, 7.29951, 26.0767)
+transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -32.4263, -3.91578, 26.0767)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree50" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -34.9132, 7.39005, 19.6699)
+transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -34.9132, -3.82524, 19.6699)
 skeleton = NodePath("../..")
 
 [node name="Tree51" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -27.0567, 7.86781, 14.2428)
+transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -27.0567, -3.34748, 14.2428)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree52" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -5.84542, 7.30627, 41.2752)
+transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -5.84542, -3.90902, 41.2752)
 
 [node name="Tree53" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -10.609, 6.81588, -5.35243)
+transform = Transform3D(0.996714, 0, -0.0809992, 0, 1, 0, 0.0809992, 0, 0.996714, -10.609, -4.39941, -5.35243)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree54" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 19.1814, 5.93506, 29.093)
+transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 19.1814, -5.28023, 29.093)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree55" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 13.7523, 7.24321, 27.2851)
+transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 13.7523, -3.97208, 27.2851)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree56" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 15.2951, 6.85906, 31.1238)
+transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 15.2951, -4.35623, 31.1238)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree57" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 7.25801, 7.24699, 27.1868)
+transform = Transform3D(0.471428, 0, -0.881905, 0, 1, 0, 0.881905, 0, 0.471428, 7.25801, -3.9683, 27.1868)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree58" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 40.6048, 7.29943, 23.8119)
+transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 40.6048, -3.91586, 23.8119)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree59" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 34.1746, 7.55305, 24.5097)
+transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 34.1746, -3.66224, 24.5097)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree60" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 35.892, 7.51193, 15.3807)
+transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 35.892, -3.70336, 15.3807)
 skeleton = NodePath("../Tree63")
 
 [node name="Tree61" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 45.0797, 8.0323, 3.27365)
+transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 45.0797, -3.18299, 3.27365)
 skeleton = NodePath("../Tree53")
 
 [node name="Tree62" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 13.502, 6.81748, -3.58745)
+transform = Transform3D(0.244224, 0, 0.969719, 0, 1, 0, -0.969719, 0, 0.244224, 13.502, -4.39781, -3.58745)
 skeleton = NodePath("../Tree63")
 
 [node name="Tree63" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -12.8005, 6.33399, 36.878)
+transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -12.8005, -4.8813, 36.878)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree64" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -17.631, 7.13802, 33.8105)
+transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -17.631, -4.07727, 33.8105)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree65" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -17.0626, 6.75387, 37.9084)
+transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -17.0626, -4.46142, 37.9084)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree66" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -23.9086, 7.1418, 32.1441)
+transform = Transform3D(0.244089, 0, -0.969753, 0, 1, 0, 0.969753, 0, 0.244089, -23.9086, -4.07349, 32.1441)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree67" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 9.27529, 7.19424, 39.0978)
+transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 9.27529, -4.02105, 39.0978)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree68" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 2.85617, 7.44785, 36.0579)
+transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 2.85617, -3.76744, 36.0579)
 
 [node name="Tree69" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 6.73084, 7.40674, 27.6154)
+transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 6.73084, -3.80855, 27.6154)
 skeleton = NodePath("../Tree53")
 
 [node name="Tree70" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 34.2568, 7.92711, 18.01)
+transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, 34.2568, -3.28818, 18.01)
 skeleton = NodePath("../../Forest2")
 
 [node name="Tree71" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, -10.4057, 6.71229, 3.79433)
+transform = Transform3D(0.471551, 0, 0.881839, 0, 1, 0, -0.881839, 0, 0.471551, -10.4057, -4.503, 3.79433)
 skeleton = NodePath("../Tree53")
 
 [node name="Tree72" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 31.1877, 6.08309, -21.0293)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 31.1877, -5.1322, -21.0293)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree73" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 36.8227, 6.88712, -22.024)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 36.8227, -4.32817, -22.024)
 skeleton = NodePath("../Tree12")
 
 [node name="Tree74" parent="Environment/Forest2" instance=ExtResource("9_gqshd")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 33.6385, 6.50298, -24.6653)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 33.6385, -4.71231, -24.6653)
 skeleton = NodePath("../../ArenaLimits")
 
 [node name="Tree75" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 42.5806, 6.8909, -25.0293)
+transform = Transform3D(-0.834425, 0, 0.551122, 0, 1, 0, -0.551122, 0, -0.834425, 42.5806, -4.32439, -25.0293)
 skeleton = NodePath("../Tree9")
 
 [node name="Tree76" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 13.3953, 6.94334, -7.77407)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 13.3953, -4.27195, -7.77407)
 skeleton = NodePath("../Tree2")
 
 [node name="Tree77" parent="Environment/Forest2" instance=ExtResource("5_lgnta")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 20.1844, 7.19696, -9.86094)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 20.1844, -4.01833, -9.86094)
 
 [node name="Tree78" parent="Environment/Forest2" instance=ExtResource("10_fthd7")]
-transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 23.0203, 7.15584, -1.0152)
+transform = Transform3D(0.246881, 0, -0.969046, 0, 1, 0, 0.969046, 0, 0.246881, 23.0203, -4.05945, -1.0152)
 skeleton = NodePath("../Tree4")
 
 [node name="Forest" type="Node" parent="Environment"]
@@ -693,6 +694,493 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8494, 0, 27.2711)
 
 [node name="EnemyCharge2" parent="Environment" instance=ExtResource("9_dw4o3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.7465)
+[node name="Forest3" type="Node" parent="Environment"]
+
+[node name="Tree13" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, -18.8197, 2.78879, -23.9165)
+visible = false
+skeleton = NodePath("../Tree9")
+
+[node name="Tree14" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, -16.0838, 3.59282, -28.9422)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree15" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, -20.1342, 3.20867, -28.0998)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree16" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, -14.8431, 3.5966, -35.3177)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree6" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, -19.5506, 3.64904, -1.74143)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, -16.949, 3.90266, -8.35038)
+skeleton = NodePath("../../..")
+
+[node name="Tree4" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, -8.26518, 3.86154, -5.05192)
+
+[node name="Tree5" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 3.16861, 4.38191, 21.7662)
+skeleton = NodePath("../..")
+
+[node name="Tree8" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 14.3576, 3.24789, -23.7825)
+
+[node name="Tree7" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 9.03586, 3.78952, -21.7555)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 12.6001, 3.40538, -19.655)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree2" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 3.83002, 3.7933, -17.8716)
+
+[node name="Tree9" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.808986, 0, 0.587828, 0, 1, 0, -0.587828, 0, 0.808986, -1.63626, 1.9869, -38.1851)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree10" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.808986, 0, 0.587828, 0, 1, 0, -0.587828, 0, 0.808986, -2.68316, 2.79093, -32.5595)
+
+[node name="Tree11" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.808986, 0, 0.587828, 0, 1, 0, -0.587828, 0, 0.808986, 0.908022, 2.40679, -34.6137)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree12" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.808986, 0, 0.587828, 0, 1, 0, -0.587828, 0, 0.808986, -1.89056, 2.79471, -26.1129)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree17" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.946615, 0, 0.322365, 0, 1, 0, -0.322365, 0, 0.946615, -19.5098, 3.62591, 11.1276)
+skeleton = NodePath("../Tree13")
+
+[node name="Tree18" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.946615, 0, 0.322365, 0, 1, 0, -0.322365, 0, 0.946615, -22.1733, 3.99748, 16.1922)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree19" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.946615, 0, 0.322365, 0, 1, 0, -0.322365, 0, 0.946615, -18.1353, 4.0458, 15.2915)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree20" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.946615, 0, 0.322365, 0, 1, 0, -0.322365, 0, 0.946615, -23.3221, 4.08317, 22.5848)
+skeleton = NodePath("../Tree13")
+
+[node name="Tree21" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.941881, 0, -0.335945, 0, 1, 0, 0.335945, 0, -0.941881, -45.7848, 2.98268, -8.60193)
+skeleton = NodePath("../Tree17")
+
+[node name="Tree22" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.941881, 0, -0.335945, 0, 1, 0, 0.335945, 0, -0.941881, -43.1945, 4.04637, -13.7042)
+skeleton = NodePath("../Tree13")
+
+[node name="Tree23" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.941881, 0, -0.335945, 0, 1, 0, 0.335945, 0, -0.941881, -47.2191, 4.11749, -12.7456)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree24" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.941881, 0, -0.335945, 0, 1, 0, 0.335945, 0, -0.941881, -42.1378, 4.01616, -20.1128)
+skeleton = NodePath("../Tree17")
+
+[node name="Tree25" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.936952, 0, 0.349455, 0, 1, 0, -0.349455, 0, 0.936952, -35.3001, 0.291622, 11.8923)
+skeleton = NodePath("../Tree21")
+
+[node name="Tree26" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.936952, 0, 0.349455, 0, 1, 0, -0.349455, 0, 0.936952, -37.8168, 1.09565, 17.0314)
+skeleton = NodePath("../Tree17")
+
+[node name="Tree27" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.936952, 0, 0.349455, 0, 1, 0, -0.349455, 0, 0.936952, -33.8064, 0.711502, 16.0151)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree28" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.936952, 0, 0.349455, 0, 1, 0, -0.349455, 0, 0.936952, -38.7812, 1.09943, 23.4544)
+skeleton = NodePath("../Tree21")
+
+[node name="Tree29" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.216577, 0, -0.976266, 0, 1, 0, 0.976266, 0, 0.216577, 35.6262, 2.29432, -4.80583)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree30" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.216577, 0, -0.976266, 0, 1, 0, 0.976266, 0, 0.216577, 30.8844, 3.09835, -8.00864)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree31" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.216577, 0, -0.976266, 0, 1, 0, 0.976266, 0, 0.216577, 31.3367, 2.71421, -3.89629)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree32" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.216577, 0, -0.976266, 0, 1, 0, 0.976266, 0, 0.216577, 24.6563, 3.10213, -9.85186)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree33" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.496292, 0, 0.868156, 0, 1, 0, -0.868156, 0, 0.496292, 25.5734, 1.74514, -29.8331)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree34" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.496292, 0, 0.868156, 0, 1, 0, -0.868156, 0, 0.496292, 26.9716, 3.23497, -24.561)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree35" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.496292, 0, 0.868156, 0, 1, 0, -0.868156, 0, 0.496292, 29.4027, 2.85083, -27.9086)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree36" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.496292, 0, 0.868156, 0, 1, 0, -0.868156, 0, 0.496292, 30.3412, 3.23875, -19.0084)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree37" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 17.8726, 4.18197, 16.0903)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree38" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 20.6089, 4.37724, 11.0082)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree39" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 16.5584, 4.52583, 11.8508)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree40" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 21.8495, 3.97463, 4.63279)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree41" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 20.4719, 4.96615, 30.8276)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree42" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 23.0735, 5.21985, 24.2187)
+skeleton = NodePath("../..")
+
+[node name="Tree43" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 31.7574, 3.49439, 27.5172)
+skeleton = NodePath("../Tree5")
+
+[node name="Tree44" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 8.19766, 3.48176, 22.9552)
+
+[node name="Tree45" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.0167024, 0, -0.999861, 0, 1, 0, 0.999861, 0, -0.0167024, -15.4212, 3.51643, 37.1069)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree46" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.0167024, 0, -0.999861, 0, 1, 0, 0.999861, 0, -0.0167024, -19.2869, 3.89764, 32.8879)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree47" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.0167024, 0, -0.999861, 0, 1, 0, 0.999861, 0, -0.0167024, -19.8046, 3.29018, 36.9925)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree48" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.0167024, 0, -0.999861, 0, 1, 0, 0.999861, 0, -0.0167024, -24.9145, 3.14409, 29.6452)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree49" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.684801, 0, 0.72873, 0, 1, 0, -0.72873, 0, 0.684801, 6.46894, 3.68574, 42.4402)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree50" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.684801, 0, 0.72873, 0, 1, 0, -0.72873, 0, 0.684801, -0.0906086, 3.77627, 40.3897)
+skeleton = NodePath("../../..")
+
+[node name="Tree51" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.684801, 0, 0.72873, 0, 1, 0, -0.72873, 0, 0.684801, 0.565288, 4.25404, 30.8635)
+
+[node name="Tree52" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.684801, 0, 0.72873, 0, 1, 0, -0.72873, 0, 0.684801, 34.9251, 3.6925, 31.1359)
+skeleton = NodePath("../..")
+
+[node name="Tree53" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.684801, 0, 0.72873, 0, 1, 0, -0.72873, 0, 0.684801, -4.4988, 3.2021, 5.7865)
+
+[node name="Tree54" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.983424, 0, -0.181326, 0, 1, 0, 0.181326, 0, 0.983424, 41.0058, 2.32129, 3.97387)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree55" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.983424, 0, -0.181326, 0, 1, 0, 0.181326, 0, 0.983424, 36.2072, 3.62944, 7.09105)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree56" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.983424, 0, -0.181326, 0, 1, 0, 0.181326, 0, 0.983424, 40.1703, 3.24529, 8.27843)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree57" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.983424, 0, -0.181326, 0, 1, 0, 0.181326, 0, 0.983424, 32.081, 3.63321, 12.107)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree58" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.60585, 0, 0.795579, 0, 1, 0, -0.795579, 0, -0.60585, 50.2351, 3.68566, -16.068)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree59" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.60585, 0, 0.795579, 0, 1, 0, -0.795579, 0, -0.60585, 46.7712, 3.93927, -10.6057)
+
+[node name="Tree60" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.60585, 0, 0.795579, 0, 1, 0, -0.795579, 0, -0.60585, 40.7049, 3.89816, -17.6405)
+skeleton = NodePath("../Tree63")
+
+[node name="Tree61" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.60585, 0, 0.795579, 0, 1, 0, -0.795579, 0, -0.60585, 36.9684, 4.41853, -32.3726)
+skeleton = NodePath("../Tree53")
+
+[node name="Tree62" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.60585, 0, 0.795579, 0, 1, 0, -0.795579, 0, -0.60585, 11.9148, 3.20371, -11.963)
+skeleton = NodePath("../Tree63")
+
+[node name="Tree63" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.910352, 0, -0.413835, 0, 1, 0, 0.413835, 0, 0.910352, 27.1506, 2.72022, 33.8316)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree64" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.910352, 0, -0.413835, 0, 1, 0, 0.413835, 0, 0.910352, 21.7405, 3.52424, 35.6954)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree65" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(0.910352, 0, -0.413835, 0, 1, 0, 0.413835, 0, 0.910352, 25.2987, 3.1401, 37.8062)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree66" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.910352, 0, -0.413835, 0, 1, 0, 0.413835, 0, 0.910352, 16.5235, 3.52802, 39.5643)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree67" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.395402, 0, 0.918508, 0, 1, 0, -0.918508, 0, -0.395402, 42.6509, 3.58047, 17.9567)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree68" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.395402, 0, 0.918508, 0, 1, 0, -0.918508, 0, -0.395402, 36.2718, 3.83408, 21.0797)
+skeleton = NodePath("../..")
+
+[node name="Tree69" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.395402, 0, 0.918508, 0, 1, 0, -0.918508, 0, -0.395402, 32.0874, 3.79297, 12.7864)
+skeleton = NodePath("../Tree53")
+
+[node name="Tree70" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.395402, 0, 0.918508, 0, 1, 0, -0.918508, 0, -0.395402, 41.741, 4.31334, -14.7227)
+
+[node name="Tree71" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.395402, 0, 0.918508, 0, 1, 0, -0.918508, 0, -0.395402, 2.77892, 3.09851, 11.3308)
+skeleton = NodePath("../Tree53")
+
+[node name="Tree72" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 9.30623, 2.46932, -36.6652)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree73" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 12.0422, 3.27335, -41.691)
+skeleton = NodePath("../Tree12")
+
+[node name="Tree74" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 7.99169, 2.8892, -40.8484)
+skeleton = NodePath("../../ArenaLimits")
+
+[node name="Tree75" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(-0.951153, 0, -0.308719, 0, 1, 0, 0.308719, 0, -0.951153, 13.2828, 3.27712, -48.0664)
+skeleton = NodePath("../Tree9")
+
+[node name="Tree76" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 8.57524, 3.32957, -14.4901)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree77" parent="Environment/Forest3" instance=ExtResource("5_lgnta")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 11.1769, 3.58319, -21.0991)
+skeleton = NodePath("../..")
+
+[node name="Tree78" parent="Environment/Forest3" instance=ExtResource("10_fthd7")]
+transform = Transform3D(0.91154, 0, -0.411212, 0, 1, 0, 0.411212, 0, 0.91154, 19.8607, 3.54207, -17.8006)
+skeleton = NodePath("../Tree4")
+
+[node name="Bushes" type="Node" parent="Environment"]
+
+[node name="Bush_pack" type="Node" parent="Environment/Bushes"]
+
+[node name="Tree" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236405, 0)
+skeleton = NodePath("../../..")
+
+[node name="Tree2" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6615, -0.956405, -1.70435)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64183, -0.362207, 4.10445)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree4" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60249, -0.996558, 2.45028)
+skeleton = NodePath("../Tree3")
+
+[node name="Tree5" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62216, 0.23199, -3.85626)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree6" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.76937, -0.69848, -6.19685)
+skeleton = NodePath("../Tree4")
+
+[node name="Tree7" parent="Environment/Bushes/Bush_pack" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.34378, -0.66883, -0.318183)
+skeleton = NodePath(".")
+
+[node name="Bush_pack2" type="Node" parent="Environment/Bushes"]
+
+[node name="Tree" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236405, 14.1875)
+skeleton = NodePath("../../..")
+
+[node name="Tree2" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6615, -0.956405, 12.4832)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64183, -0.362207, 18.292)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree4" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60249, -0.996558, 16.6378)
+skeleton = NodePath("../Tree3")
+
+[node name="Tree5" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62216, 0.23199, 10.3313)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree6" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.76937, -0.69848, 7.99067)
+skeleton = NodePath("../Tree4")
+
+[node name="Tree7" parent="Environment/Bushes/Bush_pack2" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.34378, -0.66883, 13.8693)
+skeleton = NodePath(".")
+
+[node name="Bush_pack3" type="Node" parent="Environment/Bushes"]
+
+[node name="Tree" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 2.20073, 0.236405, -18.3074)
+skeleton = NodePath("../../..")
+
+[node name="Tree2" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 3.57017, -0.956405, -23.0781)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 7.66284, -0.362207, -18.8316)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree4" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 5.12472, -0.996558, -18.1585)
+skeleton = NodePath("../Tree3")
+
+[node name="Tree5" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 0.629882, 0.23199, -22.6982)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree6" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 1.18222, -0.69848, -27.4282)
+skeleton = NodePath("../Tree4")
+
+[node name="Tree7" parent="Environment/Bushes/Bush_pack3" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.589196, 0, 0.80799, 0, 1, 0, -0.80799, 0, 0.589196, 6.27057, -0.66883, -24.4286)
+skeleton = NodePath(".")
+
+[node name="Bush_pack4" type="Node" parent="Environment/Bushes"]
+
+[node name="Tree" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0192, -1.60293, 4.26382)
+skeleton = NodePath("../../..")
+
+[node name="Tree2" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6807, -2.79574, 2.55947)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.661, -2.20154, 8.36827)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree4" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6217, -2.83589, 6.7141)
+skeleton = NodePath("../Tree3")
+
+[node name="Tree5" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6413, -1.60734, 0.407559)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree6" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7885, -2.53781, -1.93303)
+skeleton = NodePath("../Tree4")
+
+[node name="Tree7" parent="Environment/Bushes/Bush_pack4" instance=ExtResource("6_p2gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3629, -2.50816, 3.94563)
+skeleton = NodePath(".")
+
+[node name="Bush_pack5" type="Node" parent="Environment/Bushes"]
+
+[node name="Tree" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -13.5514, 0.236405, -7.32793)
+skeleton = NodePath("../../..")
+
+[node name="Tree2" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -8.76754, -0.956405, -8.65036)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -10.2529, -0.362207, -2.94284)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree4" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -12.152, -0.996558, -4.75626)
+skeleton = NodePath("../Tree3")
+
+[node name="Tree5" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -10.6265, 0.23199, -10.9599)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree6" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -6.30384, -0.69848, -12.958)
+skeleton = NodePath("../Tree4")
+
+[node name="Tree7" parent="Environment/Bushes/Bush_pack5" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.996735, 0, -0.0807381, 0, 1, 0, 0.0807381, 0, 0.996735, -6.20593, -0.66883, -7.05215)
+skeleton = NodePath(".")
+
+[node name="Bush_pack6" type="Node" parent="Environment/Bushes"]
+
+[node name="Tree" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -16.6768, -1.60293, 16.5455)
+skeleton = NodePath("../../..")
+
+[node name="Tree2" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -14.7868, -2.79574, 11.9561)
+skeleton = NodePath("../..")
+
+[node name="Tree3" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -11.1902, -2.20154, 16.6301)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree4" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -13.7873, -2.83589, 17.0177)
+skeleton = NodePath("../Tree3")
+
+[node name="Tree5" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -17.7511, -1.60734, 12.0076)
+skeleton = NodePath("../Tree2")
+
+[node name="Tree6" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -16.6777, -2.53781, 7.36808)
+skeleton = NodePath("../Tree4")
+
+[node name="Tree7" parent="Environment/Bushes/Bush_pack6" instance=ExtResource("6_p2gus")]
+transform = Transform3D(0.675153, 0, 0.737678, 0, 1, 0, -0.737678, 0, 0.675153, -11.9533, -2.50816, 10.9133)
+skeleton = NodePath(".")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2bx7j")

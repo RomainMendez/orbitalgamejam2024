@@ -1,102 +1,76 @@
-[gd_scene load_steps=15 format=3 uid="uid://c148d14s7v1ey"]
+[gd_scene load_steps=12 format=3 uid="uid://c148d14s7v1ey"]
 
-[ext_resource type="Texture2D" uid="uid://deqvxpakhsfit" path="res://monster_sprites.png" id="1_1ti1u"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_2ftgn"]
 [ext_resource type="AudioStream" uid="uid://qxfjnbqrobwf" path="res://monster_die.wav" id="2_7xj8c"]
+[ext_resource type="Texture2D" uid="uid://bo076joqw7tpp" path="res://deer_mini.png" id="2_lu0eb"]
+[ext_resource type="Texture2D" uid="uid://bpcu8h2gn14t8" path="res://deer_png.png" id="3_6mtm7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_afoyd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pwi8k"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(0, 256, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr6vl"]
+atlas = ExtResource("2_lu0eb")
+region = Rect2(0, 0, 719, 1251)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ousu"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(256, 256, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0ovh"]
+atlas = ExtResource("2_lu0eb")
+region = Rect2(719, 0, 719, 1251)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p34wv"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(512, 256, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4yr1"]
+atlas = ExtResource("3_6mtm7")
+region = Rect2(0, 0, 713, 1251)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sgili"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(768, 256, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3636"]
+atlas = ExtResource("2_lu0eb")
+region = Rect2(0, 0, 719, 1251)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yttr0"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(1024, 256, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qsx5k"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(0, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2q54g"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(256, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j27hp"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(512, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0st4m"]
-atlas = ExtResource("1_1ti1u")
-region = Rect2(768, 0, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4deby"]
+atlas = ExtResource("2_lu0eb")
+region = Rect2(719, 0, 719, 1251)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u8br5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pwi8k")
+"texture": SubResource("AtlasTexture_xr6vl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ousu")
+"texture": SubResource("AtlasTexture_s0ovh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p34wv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sgili")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yttr0")
+"texture": SubResource("AtlasTexture_b4yr1")
 }],
 "loop": false,
 "name": &"death",
-"speed": 8.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qsx5k")
+"texture": SubResource("AtlasTexture_a3636")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2q54g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j27hp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0st4m")
+"texture": SubResource("AtlasTexture_4deby")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 8.0
+"speed": 4.0
 }]
 
 [node name="Enemy" type="CharacterBody3D"]
+transform = Transform3D(0.314066, 0, 0, 0, 0.314066, 0, 0, 0, 0.314066, 0, 1.03148, 0)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_2ftgn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(2.43182, 0, 0, 0, 3.93604, 0, 0, 0, 2.16, 0, 0.446948, 0)
 shape = SubResource("CapsuleShape3D_afoyd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15512, 0)
+transform = Transform3D(0.803553, 0, 0, 0, 0.803553, 0, 0, 0, 0.803553, 0, 0.552297, 0)
 pixel_size = 0.009
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_u8br5")
-animation = &"idle"
+animation = &"death"
 autoplay = "idle"
 
 [node name="DeathSound" type="AudioStreamPlayer3D" parent="."]
