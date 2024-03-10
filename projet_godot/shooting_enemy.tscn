@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dhal4jv2o5482"]
+[gd_scene load_steps=15 format=3 uid="uid://dhal4jv2o5482"]
 
 [ext_resource type="Texture2D" uid="uid://dowtob4knto17" path="res://enemy_lol.png" id="1_1eigr"]
 [ext_resource type="Script" path="res://shooting_enemy.gd" id="1_tn8ip"]
 [ext_resource type="Texture2D" uid="uid://bfwtj8a8pegwp" path="res://toads1.png" id="3_wpocu"]
+[ext_resource type="AudioStream" uid="uid://2skhilxj1vnk" path="res://croak-sound-effect-41408_pixabay.mp3" id="4_yt6od"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_keq07"]
 
@@ -98,3 +99,6 @@ shape = SubResource("CapsuleShape3D_keq07")
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_6nmiq")
 autoplay = "default"
+
+[node name="croakSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_yt6od")

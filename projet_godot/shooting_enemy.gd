@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var SPEED = 2.0;
+@onready var croak_sound = $croakSound
 
 const GRAVITY = 20.0
 
@@ -30,6 +31,7 @@ func shoot():
 		return
 	
 	print("Shooting !")
+	croak_sound.play()
 	var scene = load("res://shooting_enemy_projectile.tscn")
 	var scene_instance = scene.instantiate()
 	scene_instance.set_name("pewpew")
