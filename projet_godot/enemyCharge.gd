@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const GRAVITY = 20.0
-const ERROR_IN_RANDOM_DIR = 5
+const ERROR_IN_RANDOM_DIR = 2.5
 
 const DIR_CHANGE_CONST = 25.0;
 var remaining_before_dir_change = 0;
@@ -93,6 +93,8 @@ func target_player():
 	dir = dir.normalized()
 
 func attempt_to_kill_player():
+	if current_state == State.DEAD:
+		return
 	var dist_to_player = global_position.distance_to(player.global_position)
 	if dist_to_player > attack_range:
 		return
