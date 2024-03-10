@@ -16,6 +16,7 @@ const MOUSE_SENS = 0.5
 
 var can_shoot = true
 var dead = false
+var shooting = false # for sound engine only
 
 var health_points: int = 100
 var score: int = 0
@@ -24,6 +25,15 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
 	$CanvasLayer/DeathScreen/Panel/Button.button_up.connect(restart)
+	flame_start_sound.connect("finished", _on_flame_finished);
+	flame_loop_sound.connect("finished", _on_flame_finished);
+
+# Custom method called when the sound playback finishes
+func _on_flame_finished():
+	if shooting:
+		flame_loop_sound.play()
+
+
 
 func _input(event):
 	if dead:
@@ -41,17 +51,21 @@ func _process(delta):
 	
 	if dead:
 		return
-	if Input.is_action_just_pressed("shoot"):
-		flame_start_sound.play()
+	if Input.is_action_just_pressed("shoot") and not shooting:
+		if not shooting:
+			flame_start_sound.play()
+			shooting = true;
 		animated_sprite_2d.play("shoot")
 		shoot()
 		flame_from_flamethrower.get_child(0).emitting = true
 	if Input.is_action_pressed("shoot"):
-		flame_loop_sound.play()
+		
 		shoot()
 		flame_from_flamethrower.get_child(0).emitting = true
 	if Input.is_action_just_released("shoot"):
+		shooting = false;
 		flame_end_sound.play()
+		flame_loop_sound.stop()
 		animated_sprite_2d.play("idle")
 		flame_from_flamethrower.get_child(0).emitting = false
 
@@ -108,4 +122,4 @@ func hurt(damage: int):
 	# print('player took damage! health points: ', health_points)
 	if health_points <= 0:
 		kill()
-	
+		

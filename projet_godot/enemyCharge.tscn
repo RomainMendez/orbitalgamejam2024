@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5aga45gxki8a"]
+[gd_scene load_steps=16 format=3 uid="uid://c5aga45gxki8a"]
 
 [ext_resource type="Script" path="res://enemyCharge.gd" id="1_g8wmc"]
 [ext_resource type="Texture2D" uid="uid://dpj7fans8ssa0" path="res://deer.png" id="2_3wmb6"]
 [ext_resource type="AudioStream" uid="uid://qxfjnbqrobwf" path="res://monster_die.wav" id="3_15syr"]
+[ext_resource type="AudioStream" uid="uid://dxsnxllo65ycf" path="res://swing_floraphonic_from_pixabay_.mp3" id="4_r5sqq"]
+[ext_resource type="AudioStream" uid="uid://crs1lqxpf53eo" path="res://metal-pipe-162670_Kaleb_Rubio_from_Pixabay.mp3" id="5_0bh06"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_afoyd"]
 
@@ -111,3 +113,9 @@ autoplay = "idle"
 stream = ExtResource("3_15syr")
 unit_size = 2.0
 bus = &"Sfx"
+
+[node name="dashSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_r5sqq")
+
+[node name="crashSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_0bh06")
