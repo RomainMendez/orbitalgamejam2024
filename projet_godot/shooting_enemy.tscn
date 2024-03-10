@@ -70,5 +70,5 @@ animation = &"death"
 autoplay = "default"
 frame_progress = 0.0441334
 
-[node name="croakSound" type="AudioStreamPlayer" parent="."]
+[node name="croakSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_o8ut5")

@@ -9,6 +9,7 @@ const GRAVITY = 20.0
 @export var attack_range = 2.0	
 @export var charge_range = 15.0
 @onready var dash_sound = $dashSound
+@onready var crash_sound = $crashSound
 
 enum State {
 	PREPARE_CHARGE,
@@ -54,6 +55,7 @@ func _physics_process(delta):
 			if (collision):
 				current_state=State.STUNNED;
 				animated_sprite_3d.play("death")
+				crash_sound.play()
 				my_timer = 1000.0;
 
 		State.STUNNED:
