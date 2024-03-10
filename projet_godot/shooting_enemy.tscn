@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhal4jv2o5482"]
+[gd_scene load_steps=11 format=3 uid="uid://dhal4jv2o5482"]
 
 [ext_resource type="Texture2D" uid="uid://dowtob4knto17" path="res://enemy_lol.png" id="1_1eigr"]
 [ext_resource type="Script" path="res://shooting_enemy.gd" id="1_tn8ip"]
+[ext_resource type="AudioStream" uid="uid://dbdgbyhu84uew" path="res://croak-sound-effect-41408_pixabay.mp3" id="3_o8ut5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_keq07"]
 
@@ -68,3 +69,6 @@ sprite_frames = SubResource("SpriteFrames_6nmiq")
 animation = &"death"
 autoplay = "default"
 frame_progress = 0.0441334
+
+[node name="croakSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_o8ut5")
