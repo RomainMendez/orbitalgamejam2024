@@ -5,6 +5,7 @@ const SPEED = 3.0
 @export var remaining_distance = 450.0
 @export var initial_direction = Vector3(0, 0, 0);
 
+
 func _ready():
 	pass
 

@@ -63,3 +63,4 @@ func _physics_process(delta):
 func kill():
 	dead = true
 	$AnimatedSprite3D.play("death")
+	player.score += 1
