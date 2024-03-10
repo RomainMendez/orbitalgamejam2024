@@ -260,8 +260,10 @@ stream = ExtResource("8_fgw4y")
 
 [node name="MainSong" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_is4bq")
+volume_db = 5.0
 bus = &"Song"
 
 [node name="AltSong" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_btp42")
+volume_db = 5.0
 bus = &"Song"

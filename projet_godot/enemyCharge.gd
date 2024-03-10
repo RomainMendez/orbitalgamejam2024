@@ -1,10 +1,14 @@
 extends CharacterBody3D
 
 const GRAVITY = 20.0
+const ERROR_IN_RANDOM_DIR = 5
+
+const DIR_CHANGE_CONST = 25.0;
+var remaining_before_dir_change = 0;
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
-@export var move_speed = 1.0
+@export var move_speed = 5.0
 @export var charge_speed = 15.0
 @export var attack_range = 2.0	
 @export var charge_range = 15.0
@@ -79,7 +83,12 @@ func _physics_process(delta):
 			move_and_slide()
 
 func target_player():
-	dir = player.global_position - global_position
+	remaining_before_dir_change -= move_speed
+	if remaining_before_dir_change >= 0:
+		return
+
+	remaining_before_dir_change = DIR_CHANGE_CONST
+	dir = Vector3(randf_range(0,ERROR_IN_RANDOM_DIR),0, randf_range(0, ERROR_IN_RANDOM_DIR)) + player.global_position - global_position
 	dir.y = 0.0
 	dir = dir.normalized()
 

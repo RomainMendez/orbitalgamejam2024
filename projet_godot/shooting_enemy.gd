@@ -1,9 +1,12 @@
 extends CharacterBody3D
 
-@export var SPEED = 2.0;
+@export var SPEED = 3.0;
+const ERROR_IN_RANDOM_DIR = 10
+const DIRECTION_CHANGE_CONSTANT = 5;
+var remaining_until_direction_change = 0;
 @onready var croak_sound = $croakSound
 
-const GRAVITY = 20.0
+const GRAVITY = 50.0
 
 # The enemy isn't a gatling gun
 @export var DELAY_BETWEEN_SHOOT = 3.0;
@@ -20,6 +23,8 @@ var until_next_shoot = DELAY_BETWEEN_SHOOT
 var dead = false;
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
+
+@onready var next_destination : Vector3 = Vector3(randf_range(0,5),0, randf_range(0,5));
 
 func _ready():
 	animations.connect("animation_finished", Callable(self, "playNextAnim").bind(animations))
@@ -46,6 +51,7 @@ func shoot():
 	var scene = load("res://shooting_enemy_projectile.tscn")
 	var scene_instance = scene.instantiate()
 	scene_instance.set_name("pewpew")
+	scene_instance.global_position += Vector3(0, 1.5, 0)
 	scene_instance.initial_direction = (player.global_position + Vector3(0, 1.5, 0)  - global_position).normalized()
 	scene_instance.velocity = (player.global_position + Vector3(0, 1.5, 0) - global_position).normalized()
 	
@@ -64,13 +70,24 @@ func attempt_fire(delta: float):
 			until_next_shoot = DELAY_BETWEEN_SHOOT
 
 func _physics_process(delta):
+
+	if dead:
+		return
+
+	remaining_until_direction_change -= SPEED
+	if remaining_until_direction_change <= 0:
+		next_destination = Vector3(randf_range(0,ERROR_IN_RANDOM_DIR),0, randf_range(0,ERROR_IN_RANDOM_DIR)) + player.global_position - global_position
+		remaining_until_direction_change = DIRECTION_CHANGE_CONSTANT
+
+	var dir = next_destination.normalized()
+	velocity = dir * SPEED
+
 	
 	
 	# Shitty Gravity
-	velocity.y += GRAVITY * delta
+	velocity.y -= GRAVITY * delta
+	move_and_slide()
 	
-	if dead:
-		return
 	attempt_fire(delta)
 
 func kill():
