@@ -67,6 +67,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15512, 0)
 pixel_size = 0.009
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_j6nvw")
-animation = &"burning"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.334624
