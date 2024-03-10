@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=22 format=3 uid="uid://potr8w0bcnms"]
 
 [ext_resource type="PackedScene" uid="uid://b2tpdeypqykmk" path="res://MobSpawner.tscn" id="1_a28tn"]
 [ext_resource type="Shader" path="res://world.gdshader" id="1_gautq"]
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
+[ext_resource type="Shader" path="res://arenaLimits.gdshader" id="2_7x33s"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="3_1x8ah"]
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="4_qdjlk"]
@@ -45,6 +46,11 @@ backface_collision = true
 [sub_resource type="TorusMesh" id="TorusMesh_w4pkh"]
 inner_radius = 20.0
 outer_radius = 21.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_og4f1"]
+render_priority = 0
+shader = ExtResource("2_7x33s")
+shader_parameter/height_scale = 1.0
 
 [sub_resource type="Environment" id="Environment_2bx7j"]
 background_mode = 1
@@ -125,6 +131,7 @@ shape = SubResource("ConcavePolygonShape3D_5lueg")
 [node name="ArenaLimits" type="CSGMesh3D" parent="Environment"]
 use_collision = true
 mesh = SubResource("TorusMesh_w4pkh")
+material = SubResource("ShaderMaterial_og4f1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2bx7j")
