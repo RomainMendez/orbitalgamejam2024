@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Label.gd" id="3_d72uy"]
 [ext_resource type="Script" path="res://scoring.gd" id="4_gl2mp"]
 [ext_resource type="PackedScene" uid="uid://te3hqh05qh1t" path="res://fire.tscn" id="5_vktge"]
-[ext_resource type="AudioStream" uid="uid://dhp4lgvkkb6bm" path="res://Flamethrower_start_QuickSounds.com.mp3" id="6_2245b"]
+[ext_resource type="AudioStream" uid="uid://c3ct3t4106k3" path="res://Flamethrower_start_QuickSounds.com.mp3" id="6_2245b"]
 [ext_resource type="AudioStream" uid="uid://d22wf60hv86b2" path="res://Flamethrower_middle_QuickSounds.com.mp3" id="7_6tvob"]
 [ext_resource type="AudioStream" uid="uid://d4cvxsw8ho85s" path="res://Flamethrower_end_QuickSounds.com.mp3" id="8_fgw4y"]
 [ext_resource type="AudioStream" uid="uid://c7oyxvalays1w" path="res://Orbital2019_1.wav" id="10_is4bq"]
