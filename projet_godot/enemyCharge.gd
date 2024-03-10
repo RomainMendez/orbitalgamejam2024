@@ -8,7 +8,7 @@ var remaining_before_dir_change = 0;
 
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
-@export var move_speed = 5.0
+@export var move_speed = 8.0
 @export var charge_speed = 15.0
 @export var attack_range = 3.0	
 @export var charge_range = 15.0
@@ -52,10 +52,10 @@ func _physics_process(delta):
 				animated_sprite_3d.play("dash");
 				dash_sound.play()
 		State.CHARGE:
-			attempt_to_kill_player()
 			velocity.y -= GRAVITY * delta
 			var collision = move_and_collide(dir * charge_speed * delta)
 			if (collision):
+				attempt_to_kill_player()
 				current_state=State.STUNNED;
 				animated_sprite_3d.play("stunned")
 				my_timer = 1000.0;

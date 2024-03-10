@@ -1210,8 +1210,8 @@ transform = Transform3D(0.999897, 0, 0.0143461, 0, 1, 0, -0.0143461, 0, 0.999897
 [node name="spawner_z" parent="WorldEnvironment/MobSpawners" instance=ExtResource("7_2xo8r")]
 transform = Transform3D(0.999676, 0.0254616, 0, -0.0254616, 0.999676, 0, 0, 0, 1, -0.801339, 0, -42.8311)
 
-[node name="spawner" parent="WorldEnvironment/MobSpawners" instance=ExtResource("7_2xo8r")]
-transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 21)
+[node name="spawner5" parent="WorldEnvironment/MobSpawners" instance=ExtResource("7_2xo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6495, 0, 24.7867)
 
 [node name="spawner2" parent="WorldEnvironment/MobSpawners" instance=ExtResource("7_2xo8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -25)
