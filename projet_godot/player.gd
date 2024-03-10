@@ -10,20 +10,48 @@ extends CharacterBody3D
 @onready var flame_loop_sound = $flameLoopSound
 @onready var flame_end_sound = $flameEndSound
 
+@onready var main_song = $MainSong
+@onready var alt_song = $AltSong
+const LOW_LIFE_POINT = 40;
+
 
 const SPEED = 5.0
 const MOUSE_SENS = 0.5
 
 var can_shoot = true
 var dead = false
+var shooting = false # for sound engine only
 
 var health_points: int = 100
 var score: int = 0
 
+func switch_song():
+	main_song.stop()
+	alt_song.play()
+
+func replay_song(song: AudioStreamPlayer):
+	song.play()
+
+func replay_alt_song():
+	alt_song.play()
+
 func _ready():
+	main_song.play()
+	main_song.connect("finished", Callable(self, "replay_song").bind(main_song))
+	alt_song.connect("finished", Callable(self, "replay_song").bind(alt_song))
+
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
 	$CanvasLayer/DeathScreen/Panel/Button.button_up.connect(restart)
+	flame_start_sound.connect("finished", _on_flame_finished);
+	flame_loop_sound.connect("finished", _on_flame_finished);
+
+# Custom method called when the sound playback finishes
+func _on_flame_finished():
+	if shooting:
+		flame_loop_sound.play()
+
+
 
 func _input(event):
 	if dead:
@@ -41,17 +69,21 @@ func _process(delta):
 	
 	if dead:
 		return
-	if Input.is_action_just_pressed("shoot"):
-		flame_start_sound.play()
+	if Input.is_action_just_pressed("shoot") and not shooting:
+		if not shooting:
+			flame_start_sound.play()
+			shooting = true;
 		animated_sprite_2d.play("shoot")
 		shoot()
 		flame_from_flamethrower.get_child(0).emitting = true
 	if Input.is_action_pressed("shoot"):
-		flame_loop_sound.play()
+		
 		shoot()
 		flame_from_flamethrower.get_child(0).emitting = true
 	if Input.is_action_just_released("shoot"):
+		shooting = false;
 		flame_end_sound.play()
+		flame_loop_sound.stop()
 		animated_sprite_2d.play("idle")
 		flame_from_flamethrower.get_child(0).emitting = false
 
@@ -109,3 +141,6 @@ func hurt(damage: int):
 	if health_points <= 0:
 		kill()
 	
+	if health_points < LOW_LIFE_POINT:
+		switch_song()
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://2go8h24o332j"]
+[gd_scene load_steps=19 format=3 uid="uid://2go8h24o332j"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ltc0k"]
 [ext_resource type="AudioStream" uid="uid://cvrq385m34nc5" path="res://revolver_shot1.wav" id="2_j75ot"]
@@ -8,9 +8,11 @@
 [ext_resource type="Script" path="res://scoring.gd" id="4_gl2mp"]
 [ext_resource type="Texture2D" uid="uid://coyg76u6loyy2" path="res://flamethrower_ignite2.png" id="4_s0u45"]
 [ext_resource type="PackedScene" uid="uid://te3hqh05qh1t" path="res://fire.tscn" id="5_vktge"]
-[ext_resource type="AudioStream" uid="uid://dhp4lgvkkb6bm" path="res://Flamethrower_start_QuickSounds.com.mp3" id="6_2245b"]
+[ext_resource type="AudioStream" uid="uid://c3ct3t4106k3" path="res://Flamethrower_start_QuickSounds.com.mp3" id="6_2245b"]
 [ext_resource type="AudioStream" uid="uid://d22wf60hv86b2" path="res://Flamethrower_middle_QuickSounds.com.mp3" id="7_6tvob"]
 [ext_resource type="AudioStream" uid="uid://d4cvxsw8ho85s" path="res://Flamethrower_end_QuickSounds.com.mp3" id="8_fgw4y"]
+[ext_resource type="AudioStream" uid="uid://c7oyxvalays1w" path="res://Orbital2019_1.wav" id="10_is4bq"]
+[ext_resource type="AudioStream" uid="uid://b8ur64v10dy6x" path="res://Orbital2019_2.wav" id="11_btp42"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7xmbu"]
 
@@ -255,3 +257,11 @@ stream = ExtResource("7_6tvob")
 
 [node name="flameEndSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_fgw4y")
+
+[node name="MainSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_is4bq")
+bus = &"Song"
+
+[node name="AltSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_btp42")
+bus = &"Song"
