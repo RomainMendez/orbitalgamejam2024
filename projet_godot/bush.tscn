@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://cd07mfejded45"]
+
+[ext_resource type="Texture2D" uid="uid://ku7ykcmglr01" path="res://bush.png" id="1_kp8p8"]
+[ext_resource type="Script" path="res://Bush.gd" id="1_tg18l"]
+[ext_resource type="Texture2D" uid="uid://sl56sqhu8krp" path="res://bush_burning1.png" id="2_bgq4q"]
+[ext_resource type="Texture2D" uid="uid://cte0tp8cddbdx" path="res://bush_burning2.png" id="3_k7vfy"]
+[ext_resource type="Texture2D" uid="uid://co8slw7ax0urn" path="res://bush_burning3.png" id="4_e4n0d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ql441"]
+size = Vector3(1, 1.35596, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2emd4"]
+atlas = ExtResource("2_bgq4q")
+region = Rect2(0, 0, 1362, 1327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsbca"]
+atlas = ExtResource("3_k7vfy")
+region = Rect2(0, 0, 1362, 1327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cvq8"]
+atlas = ExtResource("4_e4n0d")
+region = Rect2(0, 0, 1362, 1327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilndo"]
+atlas = ExtResource("1_kp8p8")
+region = Rect2(0, 0, 1362, 1327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j6nvw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2emd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsbca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cvq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsbca")
+}],
+"loop": true,
+"name": &"burning",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilndo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[node name="Tree" type="MeshInstance3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.619747, 0, 0, 0, 0.537436, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 3
+script = ExtResource("1_tg18l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(4.25981, 0, 0, 0, 4.25981, 0, 0, 0, 3.98747, 0.152989, 2.94046, 0.394297)
+shape = SubResource("BoxShape3D_ql441")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="StaticBody3D"]
+transform = Transform3D(0.595236, 0, 0, 0, 0.595236, 0, 0, 0, 1, 0.139715, 2.82831, 0.246964)
+pixel_size = 0.009
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_j6nvw")
+animation = &"burning"
+autoplay = "idle"
+frame_progress = 0.473576
