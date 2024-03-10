@@ -10,6 +10,10 @@ extends CharacterBody3D
 @onready var flame_loop_sound = $flameLoopSound
 @onready var flame_end_sound = $flameEndSound
 
+@onready var main_song = $MainSong
+@onready var alt_song = $AltSong
+const LOW_LIFE_POINT = 40;
+
 
 const SPEED = 5.0
 const MOUSE_SENS = 0.5
@@ -20,7 +24,21 @@ var dead = false
 var health_points: int = 100
 var score: int = 0
 
+func switch_song():
+	main_song.stop()
+	alt_song.play()
+
+func replay_song(song: AudioStreamPlayer):
+	song.play()
+
+func replay_alt_song():
+	alt_song.play()
+
 func _ready():
+	main_song.play()
+	main_song.connect("finished", Callable(self, "replay_song").bind(main_song))
+	alt_song.connect("finished", Callable(self, "replay_song").bind(alt_song))
+
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
 	$CanvasLayer/DeathScreen/Panel/Button.button_up.connect(restart)
@@ -109,3 +127,5 @@ func hurt(damage: int):
 	if health_points <= 0:
 		kill()
 	
+	if health_points < LOW_LIFE_POINT:
+		switch_song()
