@@ -52,7 +52,7 @@ func _physics_process(delta):
 			var collision = move_and_collide(dir * charge_speed * delta)
 			if (collision):
 				current_state=State.STUNNED;
-				animated_sprite_3d.play("death")
+				animated_sprite_3d.play("stunned")
 				my_timer = 1000.0;
 
 		State.STUNNED:

@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://2eovmr5wpy0g"]
+
+[ext_resource type="Script" path="res://Tree.gd" id="1_mgfln"]
+[ext_resource type="Texture2D" uid="uid://crwg3mxsuxn31" path="res://burning_tree.png" id="2_evo60"]
+[ext_resource type="Texture2D" uid="uid://beln1en0qvit2" path="res://burning_tree2.png" id="3_43i3x"]
+[ext_resource type="Texture2D" uid="uid://cncjuag1nkeq" path="res://burning_tree3.png" id="4_tn2qw"]
+[ext_resource type="Texture2D" uid="uid://d1l5hyy1yocsh" path="res://trees.png" id="5_kfik1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2te00"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxnxh"]
+atlas = ExtResource("2_evo60")
+region = Rect2(1204, 0, 602, 2557)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nwcs"]
+atlas = ExtResource("3_43i3x")
+region = Rect2(1204, 0, 602, 2557)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osod8"]
+atlas = ExtResource("4_tn2qw")
+region = Rect2(1204, 0, 602, 2557)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20wfa"]
+atlas = ExtResource("5_kfik1")
+region = Rect2(1204, 0, 602, 2557)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j6nvw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxnxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nwcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osod8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nwcs")
+}],
+"loop": true,
+"name": &"burning",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20wfa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[node name="Tree" type="MeshInstance3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 3
+script = ExtResource("1_mgfln")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_2te00")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15512, 0)
+pixel_size = 0.009
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_j6nvw")
+animation = &"burning"
+autoplay = "idle"
+frame_progress = 0.703953

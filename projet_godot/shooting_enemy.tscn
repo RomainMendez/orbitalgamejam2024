@@ -1,17 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhal4jv2o5482"]
+[gd_scene load_steps=14 format=3 uid="uid://dhal4jv2o5482"]
 
 [ext_resource type="Texture2D" uid="uid://dowtob4knto17" path="res://enemy_lol.png" id="1_1eigr"]
 [ext_resource type="Script" path="res://shooting_enemy.gd" id="1_tn8ip"]
+[ext_resource type="Texture2D" uid="uid://bfwtj8a8pegwp" path="res://toads1.png" id="3_wpocu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_keq07"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bgti"]
-atlas = ExtResource("1_1eigr")
-region = Rect2(266, 271, 266, 271)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_43m08"]
-atlas = ExtResource("1_1eigr")
-region = Rect2(0, 271, 266, 271)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxxi1"]
 atlas = ExtResource("1_1eigr")
@@ -25,19 +18,28 @@ region = Rect2(266, 0, 266, 271)
 atlas = ExtResource("1_1eigr")
 region = Rect2(532, 0, 266, 271)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgt1e"]
+atlas = ExtResource("3_wpocu")
+region = Rect2(3087, 0, 1029, 923)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rchw"]
+atlas = ExtResource("3_wpocu")
+region = Rect2(0, 0, 1029, 923)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv5wt"]
+atlas = ExtResource("3_wpocu")
+region = Rect2(1029, 0, 1029, 923)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o44ca"]
+atlas = ExtResource("3_wpocu")
+region = Rect2(0, 0, 1029, 923)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl2c1"]
+atlas = ExtResource("3_wpocu")
+region = Rect2(2058, 0, 1029, 923)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6nmiq"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1bgti")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_43m08")
-}],
-"loop": true,
-"name": &"death",
-"speed": 1.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kxxi1")
@@ -51,6 +53,36 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgt1e")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rchw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv5wt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o44ca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl2c1")
+}],
+"loop": true,
+"name": &"shooting",
+"speed": 4.0
 }]
 
 [node name="ShootingEnemy" type="CharacterBody3D"]
@@ -65,6 +97,4 @@ shape = SubResource("CapsuleShape3D_keq07")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_6nmiq")
-animation = &"death"
 autoplay = "default"
-frame_progress = 0.0441334
