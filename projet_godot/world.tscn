@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=21 format=3 uid="uid://potr8w0bcnms"]
 
+[ext_resource type="Shader" path="res://world.gdshader" id="1_7pv5m"]
 [ext_resource type="PackedScene" uid="uid://b2tpdeypqykmk" path="res://MobSpawner.tscn" id="1_a28tn"]
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="2_kofwd"]
@@ -8,10 +9,30 @@
 [ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree.tscn" id="5_lgnta"]
 [ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgmw"]
-albedo_color = Color(0.152941, 0.231373, 0.0980392, 1)
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ymxee"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lxttk"]
+noise = SubResource("FastNoiseLite_ymxee")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wfm0d"]
+as_normal_map = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3mkvr"]
+render_priority = 0
+shader = ExtResource("1_7pv5m")
+shader_parameter/noise = SubResource("NoiseTexture2D_lxttk")
+shader_parameter/normalmap = SubResource("NoiseTexture2D_wfm0d")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pw2v5"]
+size = Vector2(4, 4)
+subdivide_width = 128
+subdivide_depth = 128
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_blfy2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a2i1"]
+albedo_color = Color(0.580392, 0.729412, 0.360784, 1)
+albedo_texture = SubResource("PlaceholderTexture2D_blfy2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54xf7"]
 albedo_color = Color(0.109804, 1, 1, 1)
@@ -42,9 +63,10 @@ volumetric_fog_density = 0.15
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="Ground" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(27.5909, 0, 0, 0, 1, 0, 0, 0, 21.6831, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_qxgmw")
+transform = Transform3D(27.5909, 0, 0, 0, 1, 0, 0, 0, 21.6831, 0, -0.5, 0)
+material_override = SubResource("ShaderMaterial_3mkvr")
 mesh = SubResource("PlaneMesh_pw2v5")
+surface_material_override/0 = SubResource("StandardMaterial3D_6a2i1")
 
 [node name="Block" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.44593, 0, 0, 0, 4.70178, 0, 0, 0, 1.32646, -5.02943, 0.429212, 4.0552)
