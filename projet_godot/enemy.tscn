@@ -62,11 +62,11 @@ collision_mask = 3
 script = ExtResource("1_2ftgn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.43182, 0, 0, 0, 3.93604, 0, 0, 0, 2.16, 0, 0.446948, 0)
+transform = Transform3D(0.414406, 0, 0, 0, 1.14036, 0, 0, 0, 0.482712, 0, -2.12312, 0)
 shape = SubResource("CapsuleShape3D_afoyd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(0.803553, 0, 0, 0, 0.803553, 0, 0, 0, 0.803553, 0, 0.552297, 0)
+transform = Transform3D(0.333675, 0, 0, 0, 0.333675, 0, 0, 0, 0.333675, 0, -1.6922, 0)
 pixel_size = 0.009
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_u8br5")

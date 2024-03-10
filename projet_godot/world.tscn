@@ -1,16 +1,16 @@
-[gd_scene load_steps=21 format=3 uid="uid://potr8w0bcnms"]
+[gd_scene load_steps=22 format=3 uid="uid://potr8w0bcnms"]
 
 [ext_resource type="PackedScene" uid="uid://b2tpdeypqykmk" path="res://MobSpawner.tscn" id="1_a28tn"]
 [ext_resource type="Shader" path="res://world.gdshader" id="1_gautq"]
 [ext_resource type="PackedScene" uid="uid://2go8h24o332j" path="res://player.tscn" id="1_n0l67"]
 [ext_resource type="Shader" path="res://arenaLimits.gdshader" id="2_7x33s"]
 [ext_resource type="PackedScene" uid="uid://cscjgvjnucu1n" path="res://Tree0.tscn" id="5_lgnta"]
+[ext_resource type="PackedScene" path="res://bush.tscn" id="6_p2gus"]
 [ext_resource type="PackedScene" uid="uid://irp10a0b67ih" path="res://SpawnPoint.tscn" id="7_2xo8r"]
 [ext_resource type="PackedScene" uid="uid://c148d14s7v1ey" path="res://enemy.tscn" id="9_bms4e"]
 [ext_resource type="PackedScene" uid="uid://c5aga45gxki8a" path="res://enemyCharge.tscn" id="9_dw4o3"]
 [ext_resource type="PackedScene" uid="uid://2eovmr5wpy0g" path="res://Tree2.tscn" id="9_gqshd"]
 [ext_resource type="PackedScene" uid="uid://dhal4jv2o5482" path="res://shooting_enemy.tscn" id="9_ixcdh"]
-[ext_resource type="PackedScene" uid="uid://cd07mfejded45" path="res://bush.tscn" id="6_p2gus"]
 [ext_resource type="PackedScene" uid="uid://bn4astopqaqly" path="res://Tree3.tscn" id="10_fthd7"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_3bqst"]
@@ -694,6 +694,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8494, 0, 27.2711)
 
 [node name="EnemyCharge2" parent="Environment" instance=ExtResource("9_dw4o3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.7465)
+
 [node name="Forest3" type="Node" parent="Environment"]
 
 [node name="Tree13" parent="Environment/Forest3" instance=ExtResource("9_gqshd")]

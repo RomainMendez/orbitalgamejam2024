@@ -5,7 +5,7 @@ const GRAVITY = 20.0
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
 @export var move_speed = 2.0
-@export var attack_range = 2.0
+@export var attack_range = 2.5
 
 @onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
 var dead = false

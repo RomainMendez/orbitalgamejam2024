@@ -10,7 +10,7 @@ var remaining_before_dir_change = 0;
 
 @export var move_speed = 5.0
 @export var charge_speed = 15.0
-@export var attack_range = 2.0	
+@export var attack_range = 3.0	
 @export var charge_range = 15.0
 @onready var dash_sound = $dashSound
 @onready var crash_sound = $crashSound
